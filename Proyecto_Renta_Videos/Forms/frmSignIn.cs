@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Renta_Videos
+namespace Proyecto_Renta_Videos.Forms
 {
-    public partial class Form1 : Form
+    public partial class frmSignIn : Form
     {
-        public Form1()
+        public frmSignIn()
         {
             InitializeComponent();
         }
