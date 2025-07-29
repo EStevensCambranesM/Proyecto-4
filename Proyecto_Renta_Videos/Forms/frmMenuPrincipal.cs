@@ -16,5 +16,28 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a Inicio de Sesion
+            frmLogIn logIn = new frmLogIn();
+            logIn.Show();
+            this.Hide();
+        }
+
+        private void nuevoUsuariooToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a Creacion Usuario
+            frmSignIn signIn = new frmSignIn();
+            signIn.Show();
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a Modulo de Ayuda
+            frmAyuda ayudaEmpleado = new frmAyuda();
+            ayudaEmpleado.Show();
+            this.Hide();
+        }
     }
 }
