@@ -47,5 +47,17 @@ namespace Proyecto_Renta_Videos.Forms
             proveedor.Show();
             this.Hide();
         }
+
+        private void rentasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRentasPorCliente rentasPorCliente = new frmRentasPorCliente();
+            rentasPorCliente.Show();
+            this.Hide();
+        }
+
+        private void inventarioDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

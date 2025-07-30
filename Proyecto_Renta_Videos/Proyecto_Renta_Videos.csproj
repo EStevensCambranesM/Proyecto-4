@@ -58,6 +58,12 @@
     <Compile Include="Forms\frmDevolucion.Designer.cs">
       <DependentUpon>frmDevolucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmInventarioDisponible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventarioDisponible.Designer.cs">
+      <DependentUpon>frmInventarioDisponible.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="Forms\frmRentas.Designer.cs">
       <DependentUpon>frmRentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRentasPorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRentasPorCliente.Designer.cs">
+      <DependentUpon>frmRentasPorCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmSignIn.cs">
       <SubType>Form</SubType>

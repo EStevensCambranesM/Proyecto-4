@@ -201,12 +201,14 @@
             this.rentasPorClienteToolStripMenuItem.Name = "rentasPorClienteToolStripMenuItem";
             this.rentasPorClienteToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
             this.rentasPorClienteToolStripMenuItem.Text = "Rentas por Cliente";
+            this.rentasPorClienteToolStripMenuItem.Click += new System.EventHandler(this.rentasPorClienteToolStripMenuItem_Click);
             // 
             // inventarioDisponibleToolStripMenuItem
             // 
             this.inventarioDisponibleToolStripMenuItem.Name = "inventarioDisponibleToolStripMenuItem";
             this.inventarioDisponibleToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
             this.inventarioDisponibleToolStripMenuItem.Text = "Inventario Disponible";
+            this.inventarioDisponibleToolStripMenuItem.Click += new System.EventHandler(this.inventarioDisponibleToolStripMenuItem_Click);
             // 
             // gananciasYPerdidasToolStripMenuItem
             // 
