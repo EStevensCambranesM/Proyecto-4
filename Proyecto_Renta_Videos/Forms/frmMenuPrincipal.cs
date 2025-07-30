@@ -51,8 +51,8 @@ namespace Proyecto_Renta_Videos.Forms
         private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // nuevo cliente
-            frmNuevoCliente proveedor = new frmNuevoCliente();
-            proveedor.Show();
+            frmNuevoCliente nuevoCliente = new frmNuevoCliente();
+            nuevoCliente.Show();
             this.Hide();
         }
     }
