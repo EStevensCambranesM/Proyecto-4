@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +48,13 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
+        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNuevoCliente proveedor = new frmNuevoCliente();
+            proveedor.Show();
+            this.Hide();
+        }
+
         private void rentasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmRentasPorCliente rentasPorCliente = new frmRentasPorCliente();
@@ -68,5 +75,4 @@ namespace Proyecto_Renta_Videos.Forms
             ganancias.Show();
             this.Hide();
         }
-    }
-}
+
