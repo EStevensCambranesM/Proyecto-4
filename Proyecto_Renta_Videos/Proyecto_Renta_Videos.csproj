@@ -58,6 +58,12 @@
     <Compile Include="Forms\frmDevolucion.Designer.cs">
       <DependentUpon>frmDevolucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmGananciasYPerdidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGananciasYPerdidas.Designer.cs">
+      <DependentUpon>frmGananciasYPerdidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmInventarioDisponible.cs">
       <SubType>Form</SubType>
     </Compile>

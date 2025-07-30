@@ -57,7 +57,16 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void inventarioDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmInventarioDisponible inventarioDisponible = new frmInventarioDisponible();
+            inventarioDisponible.Show();
+            this.Hide();
+        }
 
+        private void gananciasYPerdidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGananciasYPerdidas ganancias = new frmGananciasYPerdidas();
+            ganancias.Show();
+            this.Hide();
         }
     }
 }

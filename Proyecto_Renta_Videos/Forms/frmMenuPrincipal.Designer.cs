@@ -215,6 +215,7 @@
             this.gananciasYPerdidasToolStripMenuItem.Name = "gananciasYPerdidasToolStripMenuItem";
             this.gananciasYPerdidasToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
             this.gananciasYPerdidasToolStripMenuItem.Text = "Ganancias y Perdidas";
+            this.gananciasYPerdidasToolStripMenuItem.Click += new System.EventHandler(this.gananciasYPerdidasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
