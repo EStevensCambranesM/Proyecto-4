@@ -83,4 +83,5 @@ namespace Proyecto_Renta_Videos.Forms
             ganancias.Show();
             this.Hide();
         }
-
+    }
+}
