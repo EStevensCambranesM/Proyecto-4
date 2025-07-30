@@ -47,5 +47,13 @@ namespace Proyecto_Renta_Videos.Forms
             proveedor.Show();
             this.Hide();
         }
+
+        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // nuevo cliente
+            frmNuevoCliente proveedor = new frmNuevoCliente();
+            proveedor.Show();
+            this.Hide();
+        }
     }
 }
