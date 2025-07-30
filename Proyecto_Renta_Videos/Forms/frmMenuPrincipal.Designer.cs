@@ -203,18 +203,21 @@
             this.rentasPorClienteToolStripMenuItem.Name = "rentasPorClienteToolStripMenuItem";
             this.rentasPorClienteToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.rentasPorClienteToolStripMenuItem.Text = "Rentas por Cliente";
+            this.rentasPorClienteToolStripMenuItem.Click += new System.EventHandler(this.rentasPorClienteToolStripMenuItem_Click);
             // 
             // inventarioDisponibleToolStripMenuItem
             // 
             this.inventarioDisponibleToolStripMenuItem.Name = "inventarioDisponibleToolStripMenuItem";
             this.inventarioDisponibleToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.inventarioDisponibleToolStripMenuItem.Text = "Inventario Disponible";
+            this.inventarioDisponibleToolStripMenuItem.Click += new System.EventHandler(this.inventarioDisponibleToolStripMenuItem_Click);
             // 
             // gananciasYPerdidasToolStripMenuItem
             // 
             this.gananciasYPerdidasToolStripMenuItem.Name = "gananciasYPerdidasToolStripMenuItem";
             this.gananciasYPerdidasToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gananciasYPerdidasToolStripMenuItem.Text = "Ganancias y Perdidas";
+            this.gananciasYPerdidasToolStripMenuItem.Click += new System.EventHandler(this.gananciasYPerdidasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
