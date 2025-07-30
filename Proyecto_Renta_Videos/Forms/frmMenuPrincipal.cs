@@ -55,5 +55,13 @@ namespace Proyecto_Renta_Videos.Forms
             nuevoCliente.Show();
             this.Hide();
         }
+
+        private void membresíasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // formulario membresía
+            frmMembresia membresia = new frmMembresia();
+            membresia.Show();
+            this.Hide();
+        }
     }
 }

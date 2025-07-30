@@ -64,6 +64,12 @@
     <Compile Include="Forms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMembresia.Designer.cs">
+      <DependentUpon>frmMembresia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
