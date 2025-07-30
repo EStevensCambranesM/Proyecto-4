@@ -122,6 +122,7 @@
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
             this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
+            this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // membresíasToolStripMenuItem
             // 
