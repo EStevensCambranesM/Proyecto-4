@@ -129,6 +129,7 @@
             this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
             this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.membresíasToolStripMenuItem.Text = "Membresías";
+            this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
