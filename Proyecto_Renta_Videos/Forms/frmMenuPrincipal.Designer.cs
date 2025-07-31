@@ -86,18 +86,21 @@
             this.registrarRentaToolStripMenuItem.Name = "registrarRentaToolStripMenuItem";
             this.registrarRentaToolStripMenuItem.Size = new System.Drawing.Size(229, 32);
             this.registrarRentaToolStripMenuItem.Text = "Registrar Renta";
+            this.registrarRentaToolStripMenuItem.Click += new System.EventHandler(this.registrarRentaToolStripMenuItem_Click_1);
             // 
             // devoluciónToolStripMenuItem
             // 
             this.devoluciónToolStripMenuItem.Name = "devoluciónToolStripMenuItem";
             this.devoluciónToolStripMenuItem.Size = new System.Drawing.Size(229, 32);
             this.devoluciónToolStripMenuItem.Text = "Devolución";
+            this.devoluciónToolStripMenuItem.Click += new System.EventHandler(this.devoluciónToolStripMenuItem_Click_1);
             // 
             // moraToolStripMenuItem
             // 
             this.moraToolStripMenuItem.Name = "moraToolStripMenuItem";
             this.moraToolStripMenuItem.Size = new System.Drawing.Size(229, 32);
             this.moraToolStripMenuItem.Text = "Mora";
+            this.moraToolStripMenuItem.Click += new System.EventHandler(this.moraToolStripMenuItem_Click_1);
             // 
             // gestiónToolStripMenuItem
             // 
@@ -246,6 +249,7 @@
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuPrincipal";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load_1);
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);

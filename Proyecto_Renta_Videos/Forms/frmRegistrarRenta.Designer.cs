@@ -1,4 +1,4 @@
-﻿namespace Proyecto_Renta_Videos.Forms
+namespace Proyecto_Renta_Videos.Forms
 {
     partial class frmRegistrarRenta
     {
@@ -28,6 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.SuspendLayout();
+            // 
+            // frmRegistrarRenta
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "frmRegistrarRenta";
+            this.Text = "frmRegistrarRenta";
+            this.ResumeLayout(false);
+
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
