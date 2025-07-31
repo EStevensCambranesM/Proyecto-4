@@ -54,6 +54,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.agregar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideos)).BeginInit();
             this.SuspendLayout();
@@ -295,12 +296,22 @@
             this.agregar.UseVisualStyleBackColor = true;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(339, 369);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 25);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "label13";
+            // 
             // frmRegistrar_renta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(900, 703);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.agregar);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -369,5 +380,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button agregar;
+        private System.Windows.Forms.Label label13;
     }
 }
