@@ -16,5 +16,10 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
         }
+
+        private void btnCrearUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
