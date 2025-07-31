@@ -40,6 +40,30 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
+        private void registrarRentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a registrar renta
+            frmRegistrarRenta registro_renta = new frmRegistrarRenta();
+            registro_renta.Show();
+            this.Hide();
+        }
+
+        private void devoluciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a Devolucion
+            frmDevolucion devolucion = new frmDevolucion();
+            devolucion.Show();
+            this.Hide();
+            
+        }
+
+        private void moraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Menu a Mora
+            frmMora mora = new frmMora();
+            mora.Show();
+        }
+        
         private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // nuevo proveedor
@@ -65,6 +89,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void rentasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // menu a rentas por cliente
             frmRentasPorCliente rentasPorCliente = new frmRentasPorCliente();
             rentasPorCliente.Show();
             this.Hide();
@@ -72,6 +97,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void inventarioDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // menu a inventario
             frmInventarioDisponible inventarioDisponible = new frmInventarioDisponible();
             inventarioDisponible.Show();
             this.Hide();
@@ -79,6 +105,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void gananciasYPerdidasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // menu a ganancias
             frmGananciasYPerdidas ganancias = new frmGananciasYPerdidas();
             ganancias.Show();
             this.Hide();
