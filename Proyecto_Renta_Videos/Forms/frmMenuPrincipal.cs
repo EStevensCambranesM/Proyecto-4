@@ -42,20 +42,20 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void rentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            // No es una accion importante
         }
 
         private void registrarRentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Menu a registrar renta
-            frmRegistrar_renta registro_renta = new frmRegistrar_renta();
+            frmRegistrarRenta registro_renta = new frmRegistrarRenta();
             registro_renta.Show();
             this.Hide();
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
-
+            // No es una accion importante
         }
 
         private void devoluciónToolStripMenuItem_Click(object sender, EventArgs e)
