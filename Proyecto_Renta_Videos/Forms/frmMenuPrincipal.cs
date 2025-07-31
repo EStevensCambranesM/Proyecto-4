@@ -72,6 +72,7 @@ namespace Proyecto_Renta_Videos.Forms
             //Menu a Mora
             frmMora mora = new frmMora();
             mora.Show();
+        }
 
         private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="Forms\frmRegistrar_renta.Designer.cs">
       <DependentUpon>frmRegistrar_renta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmNewProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
