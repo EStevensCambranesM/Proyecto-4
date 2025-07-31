@@ -40,6 +40,39 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
+        private void rentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void registrarRentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a registrar renta
+            frmRegistrar_renta registro_renta = new frmRegistrar_renta();
+            registro_renta.Show();
+            this.Hide();
+        }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void devoluciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu a Devolucion
+            frmDevolucion devolucion = new frmDevolucion();
+            devolucion.Show();
+            this.Hide();
+            
+        }
+
+        private void moraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Menu a Mora
+            frmMora mora = new frmMora();
+            mora.Show();
+
         private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // nuevo proveedor

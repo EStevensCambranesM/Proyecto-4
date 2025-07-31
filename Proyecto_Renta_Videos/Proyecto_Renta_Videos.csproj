@@ -94,6 +94,11 @@
     <Compile Include="Forms\frmMora.Designer.cs">
       <DependentUpon>frmMora.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmRegistrar_renta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegistrar_renta.Designer.cs">
+      <DependentUpon>frmRegistrar_renta.cs</DependentUpon>
     <Compile Include="Forms\frmNewProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMora.resx">
       <DependentUpon>frmMora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegistrar_renta.resx">
+      <DependentUpon>frmRegistrar_renta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegistroVideos.resx">
       <DependentUpon>frmRegistroVideos.cs</DependentUpon>
