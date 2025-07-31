@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +72,48 @@ namespace Proyecto_Renta_Videos.Forms
             //Menu a Mora
             frmMora mora = new frmMora();
             mora.Show();
+
+        private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // nuevo proveedor
+            frmNewProveedor proveedor = new frmNewProveedor();
+            proveedor.Show();
+            this.Hide();
+        }
+
+        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // nuevo cliente
+            frmNuevoCliente nuevoCliente = new frmNuevoCliente();
+            nuevoCliente.Show();
+            this.Hide();
+        }
+
+        private void membresíasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // formulario membresía
+            frmMembresia membresia = new frmMembresia();
+            membresia.Show();
+        }
+
+        private void rentasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRentasPorCliente rentasPorCliente = new frmRentasPorCliente();
+            rentasPorCliente.Show();
+            this.Hide();
+        }
+
+        private void inventarioDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInventarioDisponible inventarioDisponible = new frmInventarioDisponible();
+            inventarioDisponible.Show();
+            this.Hide();
+        }
+
+        private void gananciasYPerdidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGananciasYPerdidas ganancias = new frmGananciasYPerdidas();
+            ganancias.Show();
             this.Hide();
         }
     }

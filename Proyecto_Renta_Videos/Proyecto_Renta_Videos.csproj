@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -58,11 +58,29 @@
     <Compile Include="Forms\frmDevolucion.Designer.cs">
       <DependentUpon>frmDevolucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmGananciasYPerdidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGananciasYPerdidas.Designer.cs">
+      <DependentUpon>frmGananciasYPerdidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInventarioDisponible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventarioDisponible.Designer.cs">
+      <DependentUpon>frmInventarioDisponible.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMembresia.Designer.cs">
+      <DependentUpon>frmMembresia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -81,6 +99,17 @@
     </Compile>
     <Compile Include="Forms\frmRegistrar_renta.Designer.cs">
       <DependentUpon>frmRegistrar_renta.cs</DependentUpon>
+    <Compile Include="Forms\frmNewProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewProveedor.Designer.cs">
+      <DependentUpon>frmNewProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNuevoCliente.Designer.cs">
+      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmRegistroVideos.cs">
       <SubType>Form</SubType>
@@ -93,6 +122,12 @@
     </Compile>
     <Compile Include="Forms\frmRentas.Designer.cs">
       <DependentUpon>frmRentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRentasPorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRentasPorCliente.Designer.cs">
+      <DependentUpon>frmRentasPorCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmSignIn.cs">
       <SubType>Form</SubType>

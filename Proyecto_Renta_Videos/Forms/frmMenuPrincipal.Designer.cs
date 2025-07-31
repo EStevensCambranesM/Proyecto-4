@@ -126,12 +126,14 @@
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
             this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(234, 32);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
+            this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // membresíasToolStripMenuItem
             // 
             this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
             this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(234, 32);
             this.membresíasToolStripMenuItem.Text = "Membresías";
+            this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -176,6 +178,7 @@
             this.nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
             this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(261, 32);
             this.nuevoProveedorToolStripMenuItem.Text = "Nuevo Proveedor";
+            this.nuevoProveedorToolStripMenuItem.Click += new System.EventHandler(this.nuevoProveedorToolStripMenuItem_Click);
             // 
             // listaProveedoresToolStripMenuItem
             // 
@@ -204,18 +207,21 @@
             this.rentasPorClienteToolStripMenuItem.Name = "rentasPorClienteToolStripMenuItem";
             this.rentasPorClienteToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
             this.rentasPorClienteToolStripMenuItem.Text = "Rentas por Cliente";
+            this.rentasPorClienteToolStripMenuItem.Click += new System.EventHandler(this.rentasPorClienteToolStripMenuItem_Click);
             // 
             // inventarioDisponibleToolStripMenuItem
             // 
             this.inventarioDisponibleToolStripMenuItem.Name = "inventarioDisponibleToolStripMenuItem";
             this.inventarioDisponibleToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
             this.inventarioDisponibleToolStripMenuItem.Text = "Inventario Disponible";
+            this.inventarioDisponibleToolStripMenuItem.Click += new System.EventHandler(this.inventarioDisponibleToolStripMenuItem_Click);
             // 
             // gananciasYPerdidasToolStripMenuItem
             // 
             this.gananciasYPerdidasToolStripMenuItem.Name = "gananciasYPerdidasToolStripMenuItem";
             this.gananciasYPerdidasToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
             this.gananciasYPerdidasToolStripMenuItem.Text = "Ganancias y Perdidas";
+            this.gananciasYPerdidasToolStripMenuItem.Click += new System.EventHandler(this.gananciasYPerdidasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
