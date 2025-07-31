@@ -40,10 +40,10 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
-        private void rentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // No es una accion importante
-        }
+        //private void rentasToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    No es una accion importante
+        //}
 
         private void registrarRentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -53,10 +53,10 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
-        {
-            // No es una accion importante
-        }
+        //private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        //{
+        //    // No es una accion importante
+        //}
 
         private void devoluciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
