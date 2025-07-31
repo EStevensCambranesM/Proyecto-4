@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Renta_Videos.Forms
 {
-    public partial class frmSignIn : Form
+    public partial class frmRegistrarRenta : Form
     {
-        public frmSignIn()
+        public frmRegistrarRenta()
         {
             InitializeComponent();
-        }
-
-        private void btnCrearUsuario_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

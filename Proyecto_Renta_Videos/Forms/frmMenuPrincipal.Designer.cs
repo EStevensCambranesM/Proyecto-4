@@ -86,18 +86,21 @@
             this.registrarRentaToolStripMenuItem.Name = "registrarRentaToolStripMenuItem";
             this.registrarRentaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.registrarRentaToolStripMenuItem.Text = "Registrar Renta";
+            this.registrarRentaToolStripMenuItem.Click += new System.EventHandler(this.registrarRentaToolStripMenuItem_Click_1);
             // 
             // devoluciónToolStripMenuItem
             // 
             this.devoluciónToolStripMenuItem.Name = "devoluciónToolStripMenuItem";
             this.devoluciónToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.devoluciónToolStripMenuItem.Text = "Devolución";
+            this.devoluciónToolStripMenuItem.Click += new System.EventHandler(this.devoluciónToolStripMenuItem_Click_1);
             // 
             // moraToolStripMenuItem
             // 
             this.moraToolStripMenuItem.Name = "moraToolStripMenuItem";
             this.moraToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.moraToolStripMenuItem.Text = "Mora";
+            this.moraToolStripMenuItem.Click += new System.EventHandler(this.moraToolStripMenuItem_Click_1);
             // 
             // gestiónToolStripMenuItem
             // 
@@ -238,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.msNavegacion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,6 +250,7 @@
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuPrincipal";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);
