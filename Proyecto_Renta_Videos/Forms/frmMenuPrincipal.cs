@@ -133,5 +133,11 @@ namespace Proyecto_Renta_Videos.Forms
             frmMora mora = new frmMora();
             mora.Show();
         }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            // No es funcional para el software
+        }
+
     }
 }
