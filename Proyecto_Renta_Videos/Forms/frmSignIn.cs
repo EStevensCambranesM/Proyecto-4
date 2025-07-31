@@ -16,15 +16,5 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
         }
-
-        private void frmSignIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboRolEmpresa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
