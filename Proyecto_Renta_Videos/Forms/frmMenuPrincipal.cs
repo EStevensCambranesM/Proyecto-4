@@ -148,5 +148,10 @@ namespace Proyecto_Renta_Videos.Forms
             // No es funcional para el software
         }
 
+        private void registroVideosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroVideos registroVideos = new frmRegistroVideos();
+            registroVideos.Show();
+        }
     }
 }
