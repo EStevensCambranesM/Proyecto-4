@@ -140,6 +140,7 @@ namespace Proyecto_Renta_Videos.Forms
             //Menu a Mora
             frmMora mora = new frmMora();
             mora.Show();
+            this.Hide();
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
