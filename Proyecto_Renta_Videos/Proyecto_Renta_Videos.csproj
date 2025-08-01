@@ -138,6 +138,12 @@
     <EmbeddedResource Include="Forms\frmDevolucion.resx">
       <DependentUpon>frmDevolucion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGananciasYPerdidas.resx">
+      <DependentUpon>frmGananciasYPerdidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInventarioDisponible.resx">
+      <DependentUpon>frmInventarioDisponible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRentas.resx">
       <DependentUpon>frmRentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRentasPorCliente.resx">
+      <DependentUpon>frmRentasPorCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
