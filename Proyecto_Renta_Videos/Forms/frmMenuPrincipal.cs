@@ -111,6 +111,14 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInventario inventario = new frmInventario();
+            inventario.Show();
+            this.Hide();
+        }
+
         private void registrarRentaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             // Menu a registrar renta

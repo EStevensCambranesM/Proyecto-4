@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Renta_Videos.Forms
 {
-    public partial class frmInventarioDisponible : Form
+    public partial class frmInventario : Form
     {
-        public frmInventarioDisponible()
+        public frmInventario()
         {
             InitializeComponent();
-        }
-
-        private void frmInventarioDisponible_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
