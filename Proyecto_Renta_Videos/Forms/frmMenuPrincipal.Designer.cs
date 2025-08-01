@@ -119,6 +119,7 @@
             this.registroVideosToolStripMenuItem.Name = "registroVideosToolStripMenuItem";
             this.registroVideosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.registroVideosToolStripMenuItem.Text = "Registro Videos";
+            this.registroVideosToolStripMenuItem.Click += new System.EventHandler(this.registroVideosToolStripMenuItem_Click);
             // 
             // nuevoClienteToolStripMenuItem
             // 
