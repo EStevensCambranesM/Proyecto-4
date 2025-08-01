@@ -16,5 +16,25 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
         }
+
+        private void frmRentasPorCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRentaPorCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

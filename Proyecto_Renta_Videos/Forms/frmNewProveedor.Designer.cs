@@ -46,9 +46,9 @@
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tslRegresar = new System.Windows.Forms.ToolStripLabel();
-            this.toolStrip1.SuspendLayout();
+            this.msNavNewProveedor = new System.Windows.Forms.MenuStrip();
+            this.volverAlMenúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msNavNewProveedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -216,23 +216,22 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // toolStrip1
+            // msNavNewProveedor
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tslRegresar});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(923, 25);
-            this.toolStrip1.TabIndex = 17;
-            this.toolStrip1.Text = "toolStrip1";
+            this.msNavNewProveedor.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.msNavNewProveedor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.volverAlMenúToolStripMenuItem});
+            this.msNavNewProveedor.Location = new System.Drawing.Point(0, 0);
+            this.msNavNewProveedor.Name = "msNavNewProveedor";
+            this.msNavNewProveedor.Size = new System.Drawing.Size(923, 28);
+            this.msNavNewProveedor.TabIndex = 17;
             // 
-            // tslRegresar
+            // volverAlMenúToolStripMenuItem
             // 
-            this.tslRegresar.Name = "tslRegresar";
-            this.tslRegresar.Size = new System.Drawing.Size(67, 22);
-            this.tslRegresar.Text = "Regresar";
-            this.tslRegresar.Click += new System.EventHandler(this.tslRegresar_Click);
+            this.volverAlMenúToolStripMenuItem.Name = "volverAlMenúToolStripMenuItem";
+            this.volverAlMenúToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
+            this.volverAlMenúToolStripMenuItem.Text = "Volver al menú";
+            this.volverAlMenúToolStripMenuItem.Click += new System.EventHandler(this.volverAlMenúToolStripMenuItem_Click);
             // 
             // frmNewProveedor
             // 
@@ -240,7 +239,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(923, 495);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.label9);
@@ -257,10 +255,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.msNavNewProveedor);
+            this.MainMenuStrip = this.msNavNewProveedor;
             this.Name = "frmNewProveedor";
             this.Text = "frmNewProveedor";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.msNavNewProveedor.ResumeLayout(false);
+            this.msNavNewProveedor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,7 +285,7 @@
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel tslRegresar;
+        private System.Windows.Forms.MenuStrip msNavNewProveedor;
+        private System.Windows.Forms.ToolStripMenuItem volverAlMenúToolStripMenuItem;
     }
 }
