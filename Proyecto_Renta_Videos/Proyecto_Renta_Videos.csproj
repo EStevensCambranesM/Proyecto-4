@@ -159,8 +159,6 @@
     <EmbeddedResource Include="Forms\frmMora.resx">
       <DependentUpon>frmMora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmNuevoCliente.resx">
-      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
     <EmbeddedResource Include="Forms\frmRegistrarRenta.resx">
       <DependentUpon>frmRegistrarRenta.cs</DependentUpon>
     </EmbeddedResource>

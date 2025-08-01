@@ -66,5 +66,16 @@ namespace Proyecto_Renta_Videos.Forms
 
 
         }
+
+        private void volverAlMenúToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //botón de newproveedor a menú
+            frmMenuPrincipal menuPrincipal = new frmMenuPrincipal();
+            menuPrincipal.Show();
+
+            //Ocultar forms nuevo proveedor
+            frmNewProveedor newProveedor = new frmNewProveedor();
+            newProveedor.Close();
+        }
     }
 }
