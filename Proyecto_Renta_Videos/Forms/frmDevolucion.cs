@@ -40,10 +40,10 @@ namespace Proyecto_Renta_Videos.Forms
                 return;
             }
 
-            // Validar ListBox
-            if (lstRentas_activas.SelectedItems.Count == 0)
+            // Validar DataGridView lista de videos
+            if (dgvRentaactiva.Rows.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar al menos una renta.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay videos en la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }

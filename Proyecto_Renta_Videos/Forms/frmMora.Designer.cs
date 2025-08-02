@@ -39,6 +39,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnAplicar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
+            this.IdRenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dias_atraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMora)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +73,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(382, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 39);
+            this.label1.Size = new System.Drawing.Size(91, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mora";
             // 
@@ -92,11 +97,17 @@
             // dgvMora
             // 
             this.dgvMora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMora.Location = new System.Drawing.Point(338, 221);
+            this.dgvMora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdRenta,
+            this.Cliente,
+            this.Fecha,
+            this.Mora,
+            this.Dias_atraso});
+            this.dgvMora.Location = new System.Drawing.Point(101, 221);
             this.dgvMora.Name = "dgvMora";
             this.dgvMora.RowHeadersWidth = 51;
             this.dgvMora.RowTemplate.Height = 24;
-            this.dgvMora.Size = new System.Drawing.Size(240, 150);
+            this.dgvMora.Size = new System.Drawing.Size(679, 150);
             this.dgvMora.TabIndex = 14;
             // 
             // label6
@@ -111,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(465, 395);
+            this.label4.Location = new System.Drawing.Point(438, 394);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 25);
             this.label4.TabIndex = 31;
@@ -120,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 395);
+            this.label5.Location = new System.Drawing.Point(258, 394);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 25);
             this.label5.TabIndex = 30;
@@ -128,7 +139,7 @@
             // 
             // btnAplicar
             // 
-            this.btnAplicar.Location = new System.Drawing.Point(290, 442);
+            this.btnAplicar.Location = new System.Drawing.Point(263, 441);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(104, 65);
             this.btnAplicar.TabIndex = 32;
@@ -138,13 +149,48 @@
             // 
             // btnQuitar
             // 
-            this.btnQuitar.Location = new System.Drawing.Point(512, 442);
+            this.btnQuitar.Location = new System.Drawing.Point(485, 441);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(104, 65);
             this.btnQuitar.TabIndex = 33;
             this.btnQuitar.Text = "Quitar Mora";
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // IdRenta
+            // 
+            this.IdRenta.HeaderText = "IdRenta";
+            this.IdRenta.MinimumWidth = 6;
+            this.IdRenta.Name = "IdRenta";
+            this.IdRenta.Width = 125;
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.MinimumWidth = 6;
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Width = 125;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Width = 125;
+            // 
+            // Mora
+            // 
+            this.Mora.HeaderText = "Mora";
+            this.Mora.MinimumWidth = 6;
+            this.Mora.Name = "Mora";
+            this.Mora.Width = 125;
+            // 
+            // Dias_atraso
+            // 
+            this.Dias_atraso.HeaderText = "Dias_atraso";
+            this.Dias_atraso.MinimumWidth = 6;
+            this.Dias_atraso.Name = "Dias_atraso";
+            this.Dias_atraso.Width = 125;
             // 
             // frmMora
             // 
@@ -189,5 +235,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAplicar;
         private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdRenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dias_atraso;
     }
 }
