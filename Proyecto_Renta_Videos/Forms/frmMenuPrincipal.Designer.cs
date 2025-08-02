@@ -51,6 +51,7 @@
             this.gananciasYPerdidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.msNavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +120,7 @@
             this.registroVideosToolStripMenuItem.Name = "registroVideosToolStripMenuItem";
             this.registroVideosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.registroVideosToolStripMenuItem.Text = "Registro Videos";
+            this.registroVideosToolStripMenuItem.Click += new System.EventHandler(this.registroVideosToolStripMenuItem_Click);
             // 
             // nuevoClienteToolStripMenuItem
             // 
@@ -237,12 +239,23 @@
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(369, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenido!";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.msNavegacion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.msNavegacion;
@@ -283,5 +296,6 @@
         private System.Windows.Forms.ToolStripMenuItem gananciasYPerdidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

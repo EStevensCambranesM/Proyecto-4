@@ -19,10 +19,16 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Menu a Inicio de Sesion
-            frmLogIn logIn = new frmLogIn();
-            logIn.Show();
-            this.Hide();
+            DialogResult resultado = MessageBox.Show("¿Seguro que deseas cerrar sesión?","Confirmar cierre de sesión",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                // Menu a LogIn
+                frmLogIn logIn = new frmLogIn();
+                logIn.Show();
+                this.Hide();
+            }
         }
 
         private void nuevoUsuariooToolStripMenuItem_Click(object sender, EventArgs e)
@@ -140,6 +146,7 @@ namespace Proyecto_Renta_Videos.Forms
             //Menu a Mora
             frmMora mora = new frmMora();
             mora.Show();
+            this.Hide();
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
@@ -147,5 +154,10 @@ namespace Proyecto_Renta_Videos.Forms
             // No es funcional para el software
         }
 
+        private void registroVideosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroVideos registroVideos = new frmRegistroVideos();
+            registroVideos.Show();
+        }
     }
 }

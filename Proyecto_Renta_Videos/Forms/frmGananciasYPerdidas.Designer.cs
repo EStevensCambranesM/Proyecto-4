@@ -34,20 +34,22 @@
             // lblGanancias
             // 
             this.lblGanancias.AutoSize = true;
-            this.lblGanancias.Location = new System.Drawing.Point(249, 37);
+            this.lblGanancias.Location = new System.Drawing.Point(280, 46);
             this.lblGanancias.Name = "lblGanancias";
-            this.lblGanancias.Size = new System.Drawing.Size(131, 16);
+            this.lblGanancias.Size = new System.Drawing.Size(152, 20);
             this.lblGanancias.TabIndex = 0;
             this.lblGanancias.Text = "Ganancias/Perdidas";
             // 
             // frmGananciasYPerdidas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 563);
             this.Controls.Add(this.lblGanancias);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmGananciasYPerdidas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGananciasYPerdidas";
             this.ResumeLayout(false);
             this.PerformLayout();

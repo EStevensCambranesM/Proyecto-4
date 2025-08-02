@@ -46,9 +46,9 @@
             // 
             this.lblInventario.AutoSize = true;
             this.lblInventario.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventario.Location = new System.Drawing.Point(378, 9);
+            this.lblInventario.Location = new System.Drawing.Point(426, 11);
             this.lblInventario.Name = "lblInventario";
-            this.lblInventario.Size = new System.Drawing.Size(417, 46);
+            this.lblInventario.Size = new System.Drawing.Size(343, 37);
             this.lblInventario.TabIndex = 0;
             this.lblInventario.Text = "Inventario Disponible";
             this.lblInventario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -67,11 +67,11 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dgvInventario.Location = new System.Drawing.Point(3, 77);
+            this.dgvInventario.Location = new System.Drawing.Point(3, 97);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersWidth = 51;
             this.dgvInventario.RowTemplate.Height = 24;
-            this.dgvInventario.Size = new System.Drawing.Size(1144, 448);
+            this.dgvInventario.Size = new System.Drawing.Size(1287, 560);
             this.dgvInventario.TabIndex = 1;
             this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellContentClick);
             // 
@@ -140,13 +140,15 @@
             // 
             // frmInventarioDisponible
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1157, 614);
+            this.ClientSize = new System.Drawing.Size(1302, 768);
             this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.lblInventario);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmInventarioDisponible";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInventarioDisponible";
             this.Load += new System.EventHandler(this.frmInventarioDisponible_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
