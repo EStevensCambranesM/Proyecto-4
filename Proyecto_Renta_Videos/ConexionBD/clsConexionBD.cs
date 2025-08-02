@@ -10,7 +10,7 @@ namespace Proyecto_Renta_Videos.ConexionBD
 {
     internal class clsConexionBD
     {
-        private static MySqlConnection Conexion;
+        public static MySqlConnection Conexion;
 
         public static MySqlConnection ObtenerConexion()
         {
