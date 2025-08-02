@@ -16,5 +16,10 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
