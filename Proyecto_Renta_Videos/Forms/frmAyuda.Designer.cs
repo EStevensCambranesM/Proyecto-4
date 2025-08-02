@@ -30,6 +30,7 @@
         {
             this.msNavegacionAyuda = new System.Windows.Forms.MenuStrip();
             this.volverAMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnManualUsuario = new System.Windows.Forms.Button();
             this.msNavegacionAyuda.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             this.volverAMenuToolStripMenuItem});
             this.msNavegacionAyuda.Location = new System.Drawing.Point(0, 0);
             this.msNavegacionAyuda.Name = "msNavegacionAyuda";
-            this.msNavegacionAyuda.Size = new System.Drawing.Size(900, 29);
+            this.msNavegacionAyuda.Size = new System.Drawing.Size(431, 29);
             this.msNavegacionAyuda.TabIndex = 0;
             // 
             // volverAMenuToolStripMenuItem
@@ -50,12 +51,24 @@
             this.volverAMenuToolStripMenuItem.Text = "Volver a Menu";
             this.volverAMenuToolStripMenuItem.Click += new System.EventHandler(this.volverAMenuToolStripMenuItem_Click);
             // 
+            // btnManualUsuario
+            // 
+            this.btnManualUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManualUsuario.Location = new System.Drawing.Point(96, 78);
+            this.btnManualUsuario.Name = "btnManualUsuario";
+            this.btnManualUsuario.Size = new System.Drawing.Size(236, 39);
+            this.btnManualUsuario.TabIndex = 2;
+            this.btnManualUsuario.Text = "Necesito Ayuda";
+            this.btnManualUsuario.UseVisualStyleBackColor = true;
+            this.btnManualUsuario.Click += new System.EventHandler(this.btnManualUsuario_Click);
+            // 
             // frmAyuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(431, 177);
+            this.Controls.Add(this.btnManualUsuario);
             this.Controls.Add(this.msNavegacionAyuda);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.msNavegacionAyuda;
@@ -74,5 +87,6 @@
 
         private System.Windows.Forms.MenuStrip msNavegacionAyuda;
         private System.Windows.Forms.ToolStripMenuItem volverAMenuToolStripMenuItem;
+        private System.Windows.Forms.Button btnManualUsuario;
     }
 }

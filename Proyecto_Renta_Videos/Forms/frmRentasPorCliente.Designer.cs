@@ -46,9 +46,9 @@
             // 
             this.lblRentaPorCliente.AutoSize = true;
             this.lblRentaPorCliente.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRentaPorCliente.Location = new System.Drawing.Point(438, 9);
+            this.lblRentaPorCliente.Location = new System.Drawing.Point(492, 11);
             this.lblRentaPorCliente.Name = "lblRentaPorCliente";
-            this.lblRentaPorCliente.Size = new System.Drawing.Size(247, 40);
+            this.lblRentaPorCliente.Size = new System.Drawing.Size(198, 31);
             this.lblRentaPorCliente.TabIndex = 0;
             this.lblRentaPorCliente.Text = "Renta Por Cliente";
             this.lblRentaPorCliente.Click += new System.EventHandler(this.lblRentaPorCliente_Click);
@@ -66,11 +66,11 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dgvRenta.Location = new System.Drawing.Point(-5, 76);
+            this.dgvRenta.Location = new System.Drawing.Point(-6, 95);
             this.dgvRenta.Name = "dgvRenta";
             this.dgvRenta.RowHeadersWidth = 51;
             this.dgvRenta.RowTemplate.Height = 24;
-            this.dgvRenta.Size = new System.Drawing.Size(1106, 463);
+            this.dgvRenta.Size = new System.Drawing.Size(1245, 578);
             this.dgvRenta.TabIndex = 1;
             this.dgvRenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRenta_CellContentClick);
             // 
@@ -139,13 +139,15 @@
             // 
             // frmRentasPorCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1113, 578);
+            this.ClientSize = new System.Drawing.Size(1252, 723);
             this.Controls.Add(this.dgvRenta);
             this.Controls.Add(this.lblRentaPorCliente);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmRentasPorCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRentasPorCliente";
             this.Load += new System.EventHandler(this.frmRentasPorCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRenta)).EndInit();
