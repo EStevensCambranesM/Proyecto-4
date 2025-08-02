@@ -59,14 +59,14 @@ namespace Proyecto_Renta_Videos.Forms
                 return;
             }
 
-            // Validar ListBox
-            if (lstVideos.SelectedItems.Count == 0)
+            // Validar DataGridView lista de videos
+            if (dgvAgregarrenta.Rows.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar al menos un video.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay videos en la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Validar DataGridView
+            // Validar DataGridView videos añadidos
             if (dgvVideos.Rows.Count == 0)
             {
                 MessageBox.Show("No hay videos en la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
