@@ -19,10 +19,16 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Menu a Inicio de Sesion
-            frmLogIn logIn = new frmLogIn();
-            logIn.Show();
-            this.Hide();
+            DialogResult resultado = MessageBox.Show("¿Seguro que deseas cerrar sesión?","Confirmar cierre de sesión",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                // Menu a LogIn
+                frmLogIn logIn = new frmLogIn();
+                logIn.Show();
+                this.Hide();
+            }
         }
 
         private void nuevoUsuariooToolStripMenuItem_Click(object sender, EventArgs e)

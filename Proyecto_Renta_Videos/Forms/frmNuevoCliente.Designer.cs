@@ -43,7 +43,8 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(91, 84);
+            this.lblNombre.Location = new System.Drawing.Point(68, 119);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 20);
             this.lblNombre.TabIndex = 0;
@@ -53,7 +54,8 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(91, 124);
+            this.lblTelefono.Location = new System.Drawing.Point(68, 181);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(75, 20);
             this.lblTelefono.TabIndex = 1;
@@ -63,7 +65,8 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(91, 165);
+            this.lblCorreo.Location = new System.Drawing.Point(68, 244);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(61, 20);
             this.lblCorreo.TabIndex = 2;
@@ -72,30 +75,34 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(210, 86);
+            this.txtNombre.Location = new System.Drawing.Point(247, 122);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(275, 20);
+            this.txtNombre.Size = new System.Drawing.Size(410, 26);
             this.txtNombre.TabIndex = 3;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(210, 126);
+            this.txtTelefono.Location = new System.Drawing.Point(247, 184);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(275, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(410, 26);
             this.txtTelefono.TabIndex = 4;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(210, 167);
+            this.txtCorreo.Location = new System.Drawing.Point(247, 247);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(275, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(410, 26);
             this.txtCorreo.TabIndex = 5;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(172, 253);
+            this.btnGuardar.Location = new System.Drawing.Point(190, 379);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(113, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(170, 35);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -103,9 +110,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(384, 253);
+            this.btnCancelar.Location = new System.Drawing.Point(508, 379);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(113, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(170, 35);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -115,7 +123,8 @@
             // 
             this.lblNuevoCliente.AutoSize = true;
             this.lblNuevoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNuevoCliente.Location = new System.Drawing.Point(241, 25);
+            this.lblNuevoCliente.Location = new System.Drawing.Point(294, 28);
+            this.lblNuevoCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevoCliente.Name = "lblNuevoCliente";
             this.lblNuevoCliente.Size = new System.Drawing.Size(193, 25);
             this.lblNuevoCliente.TabIndex = 8;
@@ -123,10 +132,10 @@
             // 
             // frmNuevoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(769, 462);
             this.Controls.Add(this.lblNuevoCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -136,7 +145,10 @@
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmNuevoCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoCliente";
             this.Load += new System.EventHandler(this.frmNuevoCliente_Load);
             this.ResumeLayout(false);
