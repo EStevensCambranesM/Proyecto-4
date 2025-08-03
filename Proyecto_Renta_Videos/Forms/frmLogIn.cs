@@ -15,6 +15,7 @@ namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmLogIn : Form
     {
+
         public frmLogIn()
         {
             InitializeComponent();
@@ -22,62 +23,57 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void btnInicioSesion_Click(object sender, EventArgs e)
         {
-            string sUsuarioCorreo = txtUsuario.Text.Trim(); // puede ser usuario o correo
-            string sPassword = txtPassword.Text.Trim(); // contraseña ingresada
+            string sUsuarioCorreo = txtUsuario.Text.Trim();
+            string sPassword = txtPassword.Text.Trim();
 
-            // Campos vacios
             if (string.IsNullOrEmpty(sUsuarioCorreo))
             {
                 MessageBox.Show("Te falta tu correo o usuario");
                 return;
             }
-
             if (string.IsNullOrEmpty(sPassword))
             {
                 MessageBox.Show("Falta la contraseña que te asignaron");
                 return;
             }
 
-            // Conexion a la BD
-            DotEnv.Load(); // para cargar variables de entorno
+            DotEnv.Load();
 
-            using (MySqlConnection conexion = clsConexionBD.ObtenerConexion())
+            using (var conexion = clsConexionBD.ObtenerConexion())
             {
-                if (conexion != null)
-                {
-                    string consulta = @"SELECT * FROM tblLogIn WHERE (sUsuario = @entrada OR sCorreo = @entrada)
-                                      AND sContraseña = SHA2(@sContraseña,256)";
-
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                    comando.Parameters.AddWithValue("@entrada", sUsuarioCorreo);
-                    comando.Parameters.AddWithValue("@sContraseña", sPassword);
-
-                    MySqlDataReader lector = comando.ExecuteReader();
-
-                    if (lector.Read())
-                    {
-                        string nombreUsuario = lector["usuario"].ToString();
-                        MessageBox.Show("Bienvenido " + nombreUsuario);
-
-                        // Abrir el menú principal
-                        this.Hide();
-                        frmMenuPrincipal menu = new frmMenuPrincipal();
-                        menu.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario, correo o contraseña incorrectos.");
-                    }
-
-                    lector.Close();
-                    clsConexionBD.CerrarConexion();
-                }
-                else
+                if (conexion == null)
                 {
                     MessageBox.Show("Error al conectar con la base de datos.");
+                    return;
+                }
+
+                string consulta = @"SELECT * FROM tblLogIn WHERE (sUsuario = @entrada OR sCorreo = @entrada)
+                                  AND sContraseña = SHA2(@contrasena,256)";
+
+                using (var comando = new MySqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@entrada", sUsuarioCorreo);
+                    comando.Parameters.AddWithValue("@contrasena", sPassword);
+
+                    using (var lector = comando.ExecuteReader())
+                    {
+                        if (lector.Read())
+                        {
+                            string nombreUsuario = lector["sUsuario"].ToString();
+                            MessageBox.Show("Bienvenido " + nombreUsuario);
+
+                            //abre el menu principal
+                            this.Hide();
+                            frmMenuPrincipal menuPrincipal = new frmMenuPrincipal();
+                            menuPrincipal.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario, correo o contraseña incorrectos.");
+                        }
+                    }
                 }
             }
-
         }
     }
 }

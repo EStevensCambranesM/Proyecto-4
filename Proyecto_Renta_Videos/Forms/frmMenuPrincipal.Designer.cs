@@ -52,6 +52,7 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblBienvenidaUsuario = new System.Windows.Forms.Label();
             this.msNavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,12 +250,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido!";
             // 
+            // lblBienvenidaUsuario
+            // 
+            this.lblBienvenidaUsuario.AutoSize = true;
+            this.lblBienvenidaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenidaUsuario.Location = new System.Drawing.Point(369, 176);
+            this.lblBienvenidaUsuario.Name = "lblBienvenidaUsuario";
+            this.lblBienvenidaUsuario.Size = new System.Drawing.Size(0, 31);
+            this.lblBienvenidaUsuario.TabIndex = 2;
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.lblBienvenidaUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.msNavegacion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,7 +274,6 @@
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuPrincipal";
-            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.msNavegacion.ResumeLayout(false);
             this.msNavegacion.PerformLayout();
             this.ResumeLayout(false);
@@ -297,5 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBienvenidaUsuario;
     }
 }

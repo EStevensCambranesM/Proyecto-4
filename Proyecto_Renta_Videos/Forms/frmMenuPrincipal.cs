@@ -149,11 +149,6 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
-        {
-            // No es funcional para el software
-        }
-
         private void registroVideosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmRegistroVideos registroVideos = new frmRegistroVideos();
