@@ -166,5 +166,13 @@ namespace Proyecto_Renta_Videos.Forms
             frmCompra compras = new frmCompra();
             compras.Show();
         }
+
+        private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Menu principal a VerUsuarios
+            frmVerUsuarios verUsuarios = new frmVerUsuarios();
+            verUsuarios.Show();
+            this.Hide();
+        }
     }
 }
