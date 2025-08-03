@@ -165,5 +165,11 @@ namespace Proyecto_Renta_Videos.Forms
             frmListaProveedores listaProveedores = new frmListaProveedores();
             listaProveedores.Show();
         }
+
+        private void comprarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCompra compras = new frmCompra();
+            compras.Show();
+        }
     }
 }

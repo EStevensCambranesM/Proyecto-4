@@ -103,7 +103,7 @@
             // txtCompras
             // 
             this.txtCompras.AutoSize = true;
-            this.txtCompras.BackColor = System.Drawing.Color.PowderBlue;
+            this.txtCompras.BackColor = System.Drawing.Color.Azure;
             this.txtCompras.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompras.Location = new System.Drawing.Point(358, 30);
             this.txtCompras.Name = "txtCompras";
@@ -135,7 +135,7 @@
             this.tlsRegreso});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1012, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1012, 27);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -145,7 +145,7 @@
             this.tlsRegreso.Image = ((System.Drawing.Image)(resources.GetObject("tlsRegreso.Image")));
             this.tlsRegreso.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsRegreso.Name = "tlsRegreso";
-            this.tlsRegreso.Size = new System.Drawing.Size(124, 28);
+            this.tlsRegreso.Size = new System.Drawing.Size(124, 24);
             this.tlsRegreso.Text = "Regreso al menú";
             // 
             // frmCompra

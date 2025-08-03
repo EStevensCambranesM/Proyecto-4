@@ -194,6 +194,7 @@
             this.comprarProductoToolStripMenuItem.Name = "comprarProductoToolStripMenuItem";
             this.comprarProductoToolStripMenuItem.Size = new System.Drawing.Size(261, 32);
             this.comprarProductoToolStripMenuItem.Text = "Comprar Producto";
+            this.comprarProductoToolStripMenuItem.Click += new System.EventHandler(this.comprarProductoToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
