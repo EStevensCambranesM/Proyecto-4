@@ -83,7 +83,6 @@ namespace Proyecto_Renta_Videos.Forms
             // nuevo cliente
             frmNuevoCliente nuevoCliente = new frmNuevoCliente();
             nuevoCliente.Show();
-            this.Hide();
         }
 
         private void membresíasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,7 +121,6 @@ namespace Proyecto_Renta_Videos.Forms
         {
             frmInventario inventario = new frmInventario();
             inventario.Show();
-            this.Hide();
         }
 
         private void registrarRentaToolStripMenuItem_Click_1(object sender, EventArgs e)
