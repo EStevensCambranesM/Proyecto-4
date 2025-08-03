@@ -17,7 +17,8 @@ namespace Proyecto_Renta_Videos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenuPrincipal());
+            // Application.Run(new frmMenuPrincipal()); // esto es para inicar en el menu principal
+            Application.Run(new frmLogIn()); // esto es para iniciar en el LogIn
         }
     }
 }
