@@ -154,5 +154,11 @@ namespace Proyecto_Renta_Videos.Forms
             frmRegistroVideos registroVideos = new frmRegistroVideos();
             registroVideos.Show();
         }
+
+        private void listaProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaProveedores listaProveedores = new frmListaProveedores();
+            listaProveedores.Show();
+        }
     }
 }
