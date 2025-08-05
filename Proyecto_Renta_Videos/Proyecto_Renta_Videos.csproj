@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\clsEmpleados.cs" />
     <Compile Include="ConexionBD\clsConexionBD.cs" />
     <Compile Include="Forms\frmAyuda.cs">
       <SubType>Form</SubType>
