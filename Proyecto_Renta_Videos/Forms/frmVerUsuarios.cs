@@ -15,9 +15,19 @@ namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmVerUsuarios : Form
     {
+        // private List<clsEmpleados> verUsuarios;
         public frmVerUsuarios()
         {
             InitializeComponent();
+
+            // Crear metodo
+            cargarEmpleados();
+        }
+
+        private void cargarEmpleados(string filtro = "")
+        {
+            dgvVerUsuarios.Rows.Clear();
+            dgvVerUsuarios.Refresh();
         }
 
         private void volverAMenuToolStripMenuItem_Click(object sender, EventArgs e)

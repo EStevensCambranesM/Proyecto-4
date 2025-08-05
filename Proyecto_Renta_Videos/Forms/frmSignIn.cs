@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dotenv.net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,9 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
+            DotEnv.Load(); // llamar a var de entorno
+            string sConsultaNuevoEmpleado = "";
+
 
         }
     }
