@@ -1,4 +1,7 @@
-﻿using System;
+﻿using dotenv.net;
+using MySql.Data.MySqlClient;
+using Proyecto_Renta_Videos.ConexionBD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,21 +18,57 @@ namespace Proyecto_Renta_Videos.Forms
         public frmNewProveedor()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            DotEnv.Load();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Validación básica
+            if (string.IsNullOrWhiteSpace(txtNombreProveedor.Text) || string.IsNullOrWhiteSpace(txtTelefono.Text))
+            {
+                MessageBox.Show("Por favor, ingresa al menos el nombre y teléfono del proveedor.", "Campos requeridos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            try
+            {
+                using (MySqlConnection conexion = clsConexionBD.Conectar())
+                {
+
+                    string query = @"INSERT INTO tblProveedores 
+                            (sNombre, sDireccion, sTelefono, sCorreo, sContactoPrincipal, bActivo) 
+                            VALUES 
+                            (@nombre, @direccion, @telefono, @correo, @contacto, @activo)";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@nombre", txtNombreProveedor.Text.Trim());
+                        cmd.Parameters.AddWithValue("@direccion", txtDireccion.Text.Trim());
+                        cmd.Parameters.AddWithValue("@telefono", txtTelefono.Text.Trim());
+                        cmd.Parameters.AddWithValue("@correo", txtCorreo.Text.Trim());
+                        cmd.Parameters.AddWithValue("@contacto", txtContactoRespaldo.Text.Trim());
+                        cmd.Parameters.AddWithValue("@activo", chkActivo.Checked);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Proveedor guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarFormulario();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void tslRegresar_Click(object sender, EventArgs e)
+        private void LimpiarFormulario()
         {
-
-
+            txtNombreProveedor.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            txtCorreo.Clear();
+            txtContactoRespaldo.Clear();
+            chkActivo.Checked = false;
         }
 
         private void volverAlMenúToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,5 +78,12 @@ namespace Proyecto_Renta_Videos.Forms
             menuPrincipal.Show();
             this.Hide();
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
+

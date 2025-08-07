@@ -30,20 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDirección = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTelefonoProveedor = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCorreoProveedor = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtContacto = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtContactoRespaldo = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnGuardar = new System.Windows.Forms.Button();
             this.msNavNewProveedor = new System.Windows.Forms.MenuStrip();
@@ -57,27 +55,28 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Lavender;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 31);
+            this.label1.Location = new System.Drawing.Point(331, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(361, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de proveedor";
             // 
-            // txtNombre
+            // txtNombreProveedor
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(141, 186);
-            this.txtNombre.MaxLength = 20;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(241, 30);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProveedor.Location = new System.Drawing.Point(140, 186);
+            this.txtNombreProveedor.MaxLength = 20;
+            this.txtNombreProveedor.Name = "txtNombreProveedor";
+            this.txtNombreProveedor.Size = new System.Drawing.Size(241, 30);
+            this.txtNombreProveedor.TabIndex = 1;
+            this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(135, 151);
+            this.label2.Location = new System.Drawing.Point(147, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(220, 25);
             this.label2.TabIndex = 2;
@@ -88,64 +87,67 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(196, 252);
+            this.label3.Location = new System.Drawing.Point(216, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Dirección ";
             // 
-            // txtDirección
+            // txtDireccion
             // 
-            this.txtDirección.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirección.Location = new System.Drawing.Point(141, 288);
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(241, 30);
-            this.txtDirección.TabIndex = 4;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(141, 288);
+            this.txtDireccion.MaxLength = 45;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(241, 30);
+            this.txtDireccion.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(135, 365);
+            this.label4.Location = new System.Drawing.Point(147, 365);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(235, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Teléfono del proveedor";
             // 
-            // txtTelefonoProveedor
+            // txtTelefono
             // 
-            this.txtTelefonoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoProveedor.Location = new System.Drawing.Point(141, 400);
-            this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
-            this.txtTelefonoProveedor.Size = new System.Drawing.Size(241, 30);
-            this.txtTelefonoProveedor.TabIndex = 6;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(141, 393);
+            this.txtTelefono.MaxLength = 15;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(241, 30);
+            this.txtTelefono.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(140, 469);
+            this.label5.Location = new System.Drawing.Point(154, 475);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(216, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Correo del proveedor";
             // 
-            // txtCorreoProveedor
+            // txtCorreo
             // 
-            this.txtCorreoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoProveedor.Location = new System.Drawing.Point(141, 503);
-            this.txtCorreoProveedor.Name = "txtCorreoProveedor";
-            this.txtCorreoProveedor.Size = new System.Drawing.Size(241, 30);
-            this.txtCorreoProveedor.TabIndex = 8;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(141, 503);
+            this.txtCorreo.MaxLength = 30;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(241, 30);
+            this.txtCorreo.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Lavender;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(69, 103);
+            this.label6.Location = new System.Drawing.Point(92, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(347, 26);
             this.label6.TabIndex = 9;
@@ -156,7 +158,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Lavender;
             this.label7.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(582, 103);
+            this.label7.Location = new System.Drawing.Point(610, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(315, 26);
             this.label7.TabIndex = 10;
@@ -169,41 +171,23 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(642, 151);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(218, 25);
+            this.label8.Size = new System.Drawing.Size(216, 25);
             this.label8.TabIndex = 11;
-            this.label8.Text = "Contacto de respaldo";
+            this.label8.Text = "Telefono de respaldo";
             // 
-            // txtContacto
+            // txtContactoRespaldo
             // 
-            this.txtContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContacto.Location = new System.Drawing.Point(645, 186);
-            this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(241, 30);
-            this.txtContacto.TabIndex = 12;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(650, 252);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(212, 25);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Producto que provee";
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(645, 288);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(241, 30);
-            this.txtProducto.TabIndex = 14;
+            this.txtContactoRespaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactoRespaldo.Location = new System.Drawing.Point(636, 186);
+            this.txtContactoRespaldo.MaxLength = 15;
+            this.txtContactoRespaldo.Name = "txtContactoRespaldo";
+            this.txtContactoRespaldo.Size = new System.Drawing.Size(241, 30);
+            this.txtContactoRespaldo.TabIndex = 12;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(694, 430);
+            this.btnGuardar.Location = new System.Drawing.Point(675, 302);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 48);
             this.btnGuardar.TabIndex = 16;
@@ -232,7 +216,7 @@
             // chkActivo
             // 
             this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(677, 365);
+            this.chkActivo.Location = new System.Drawing.Point(660, 251);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(183, 29);
             this.chkActivo.TabIndex = 18;
@@ -247,20 +231,18 @@
             this.ClientSize = new System.Drawing.Size(1038, 618);
             this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtProducto);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtContacto);
+            this.Controls.Add(this.txtContactoRespaldo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCorreoProveedor);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTelefonoProveedor);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDirección);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtNombreProveedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.msNavNewProveedor);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,20 +260,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNombreProveedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDirección;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTelefonoProveedor;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCorreoProveedor;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtContacto;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.TextBox txtContactoRespaldo;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.MenuStrip msNavNewProveedor;
