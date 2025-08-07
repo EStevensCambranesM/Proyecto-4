@@ -76,5 +76,6 @@ namespace Proyecto_Renta_Videos.Forms
             // todo correcto
             MessageBox.Show("Datos agregados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }

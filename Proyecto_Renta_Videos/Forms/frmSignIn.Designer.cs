@@ -40,10 +40,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtCorreoEmpleado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCUIEmpleado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTelefonoEmpleado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCrearUsuario
@@ -74,7 +76,7 @@
             "Administrador",
             "Empleado",
             "Practicante"});
-            this.cboRolEmpresa.Location = new System.Drawing.Point(206, 135);
+            this.cboRolEmpresa.Location = new System.Drawing.Point(12, 187);
             this.cboRolEmpresa.Name = "cboRolEmpresa";
             this.cboRolEmpresa.Size = new System.Drawing.Size(188, 28);
             this.cboRolEmpresa.TabIndex = 2;
@@ -82,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(202, 112);
+            this.label2.Location = new System.Drawing.Point(8, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 3;
@@ -100,6 +102,7 @@
             // txtNombresEmpleado
             // 
             this.txtNombresEmpleado.Location = new System.Drawing.Point(12, 78);
+            this.txtNombresEmpleado.MaxLength = 50;
             this.txtNombresEmpleado.Name = "txtNombresEmpleado";
             this.txtNombresEmpleado.Size = new System.Drawing.Size(188, 26);
             this.txtNombresEmpleado.TabIndex = 5;
@@ -118,6 +121,7 @@
             // txtApellidosEmpleado
             // 
             this.txtApellidosEmpleado.Location = new System.Drawing.Point(206, 79);
+            this.txtApellidosEmpleado.MaxLength = 50;
             this.txtApellidosEmpleado.Name = "txtApellidosEmpleado";
             this.txtApellidosEmpleado.Size = new System.Drawing.Size(188, 26);
             this.txtApellidosEmpleado.TabIndex = 8;
@@ -144,6 +148,7 @@
             // txtCorreoEmpleado
             // 
             this.txtCorreoEmpleado.Location = new System.Drawing.Point(400, 78);
+            this.txtCorreoEmpleado.MaxLength = 50;
             this.txtCorreoEmpleado.Name = "txtCorreoEmpleado";
             this.txtCorreoEmpleado.Size = new System.Drawing.Size(188, 26);
             this.txtCorreoEmpleado.TabIndex = 11;
@@ -157,12 +162,13 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Correo Electrónico Empleado";
             // 
-            // textBox1
+            // txtCUIEmpleado
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 26);
-            this.textBox1.TabIndex = 13;
+            this.txtCUIEmpleado.Location = new System.Drawing.Point(12, 135);
+            this.txtCUIEmpleado.MaxLength = 20;
+            this.txtCUIEmpleado.Name = "txtCUIEmpleado";
+            this.txtCUIEmpleado.Size = new System.Drawing.Size(188, 26);
+            this.txtCUIEmpleado.TabIndex = 13;
             // 
             // label7
             // 
@@ -175,7 +181,8 @@
             // 
             // txtTelefonoEmpleado
             // 
-            this.txtTelefonoEmpleado.Location = new System.Drawing.Point(400, 137);
+            this.txtTelefonoEmpleado.Location = new System.Drawing.Point(206, 135);
+            this.txtTelefonoEmpleado.MaxLength = 15;
             this.txtTelefonoEmpleado.Name = "txtTelefonoEmpleado";
             this.txtTelefonoEmpleado.Size = new System.Drawing.Size(188, 26);
             this.txtTelefonoEmpleado.TabIndex = 15;
@@ -183,11 +190,27 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(396, 114);
+            this.label8.Location = new System.Drawing.Point(202, 112);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(181, 20);
+            this.label8.Size = new System.Drawing.Size(186, 20);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Teléono Móvil Empleado";
+            this.label8.Text = "Teléfono Móvil Empleado";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(400, 135);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(188, 26);
+            this.txtPassword.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(396, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Contraseña Empleado";
             // 
             // frmSignIn
             // 
@@ -195,9 +218,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(632, 282);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTelefonoEmpleado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCUIEmpleado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCorreoEmpleado);
             this.Controls.Add(this.label6);
@@ -235,9 +260,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCorreoEmpleado;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCUIEmpleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTelefonoEmpleado;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label9;
     }
 }

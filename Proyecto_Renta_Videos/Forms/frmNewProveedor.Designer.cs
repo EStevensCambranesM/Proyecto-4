@@ -57,7 +57,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(331, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 38);
+            this.label1.Size = new System.Drawing.Size(303, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de proveedor";
             // 
@@ -67,9 +67,8 @@
             this.txtNombreProveedor.Location = new System.Drawing.Point(140, 186);
             this.txtNombreProveedor.MaxLength = 20;
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(241, 30);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(241, 26);
             this.txtNombreProveedor.TabIndex = 1;
-            this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label2
             // 
@@ -78,7 +77,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(147, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 25);
+            this.label2.Size = new System.Drawing.Size(181, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre de proveedor";
             // 
@@ -89,7 +88,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(216, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
+            this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Dirección ";
             // 
@@ -99,7 +98,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(141, 288);
             this.txtDireccion.MaxLength = 45;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(241, 30);
+            this.txtDireccion.Size = new System.Drawing.Size(241, 26);
             this.txtDireccion.TabIndex = 4;
             // 
             // label4
@@ -109,7 +108,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(147, 365);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 25);
+            this.label4.Size = new System.Drawing.Size(193, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Teléfono del proveedor";
             // 
@@ -119,7 +118,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(141, 393);
             this.txtTelefono.MaxLength = 15;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(241, 30);
+            this.txtTelefono.Size = new System.Drawing.Size(241, 26);
             this.txtTelefono.TabIndex = 6;
             // 
             // label5
@@ -129,7 +128,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(154, 475);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 25);
+            this.label5.Size = new System.Drawing.Size(177, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Correo del proveedor";
             // 
@@ -139,7 +138,7 @@
             this.txtCorreo.Location = new System.Drawing.Point(141, 503);
             this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(241, 30);
+            this.txtCorreo.Size = new System.Drawing.Size(241, 26);
             this.txtCorreo.TabIndex = 8;
             // 
             // label6
@@ -149,7 +148,7 @@
             this.label6.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(92, 103);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(347, 26);
+            this.label6.Size = new System.Drawing.Size(286, 21);
             this.label6.TabIndex = 9;
             this.label6.Text = "Datos directos del proveedor";
             // 
@@ -160,7 +159,7 @@
             this.label7.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(610, 103);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(315, 26);
+            this.label7.Size = new System.Drawing.Size(259, 21);
             this.label7.TabIndex = 10;
             this.label7.Text = "Otros datos del proveedor";
             // 
@@ -171,7 +170,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(642, 151);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(216, 25);
+            this.label8.Size = new System.Drawing.Size(178, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "Telefono de respaldo";
             // 
@@ -181,7 +180,7 @@
             this.txtContactoRespaldo.Location = new System.Drawing.Point(636, 186);
             this.txtContactoRespaldo.MaxLength = 15;
             this.txtContactoRespaldo.Name = "txtContactoRespaldo";
-            this.txtContactoRespaldo.Size = new System.Drawing.Size(241, 30);
+            this.txtContactoRespaldo.Size = new System.Drawing.Size(241, 26);
             this.txtContactoRespaldo.TabIndex = 12;
             // 
             // btnGuardar
@@ -203,13 +202,13 @@
             this.msNavNewProveedor.Location = new System.Drawing.Point(0, 0);
             this.msNavNewProveedor.Name = "msNavNewProveedor";
             this.msNavNewProveedor.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.msNavNewProveedor.Size = new System.Drawing.Size(1038, 30);
+            this.msNavNewProveedor.Size = new System.Drawing.Size(1038, 25);
             this.msNavNewProveedor.TabIndex = 17;
             // 
             // volverAlMenúToolStripMenuItem
             // 
             this.volverAlMenúToolStripMenuItem.Name = "volverAlMenúToolStripMenuItem";
-            this.volverAlMenúToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
+            this.volverAlMenúToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.volverAlMenúToolStripMenuItem.Text = "Volver al menú";
             this.volverAlMenúToolStripMenuItem.Click += new System.EventHandler(this.volverAlMenúToolStripMenuItem_Click);
             // 
@@ -218,14 +217,14 @@
             this.chkActivo.AutoSize = true;
             this.chkActivo.Location = new System.Drawing.Point(660, 251);
             this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(183, 29);
+            this.chkActivo.Size = new System.Drawing.Size(147, 24);
             this.chkActivo.TabIndex = 18;
             this.chkActivo.Text = "Proveedor Activo";
             this.chkActivo.UseVisualStyleBackColor = true;
             // 
             // frmNewProveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1038, 618);

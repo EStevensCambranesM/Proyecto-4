@@ -19,6 +19,8 @@ namespace Proyecto_Renta_Videos.Forms
         public frmLogIn()
         {
             InitializeComponent();
+            this.AcceptButton = btnInicioSesion;
+            DotEnv.Load(); // var de entorno
         }
 
         private void btnInicioSesion_Click(object sender, EventArgs e)
@@ -36,8 +38,6 @@ namespace Proyecto_Renta_Videos.Forms
                 MessageBox.Show("Falta la contraseña que te asignaron");
                 return;
             }
-
-            DotEnv.Load();
 
             using (var conexion = clsConexionBD.ObtenerConexion())
             {
