@@ -17,14 +17,11 @@ namespace Proyecto_Renta_Videos.Forms
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void regresarAMenùToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            frmMenuPrincipal RegresoMenu = new frmMenuPrincipal();
+            RegresoMenu.Show();
+            this.Hide();
         }
     }
 }

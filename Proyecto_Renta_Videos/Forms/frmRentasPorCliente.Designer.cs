@@ -53,26 +53,146 @@
             this.lblRentaPorCliente.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentaPorCliente.Location = new System.Drawing.Point(431, 8);
             this.lblRentaPorCliente.Name = "lblRentaPorCliente";
-            this.lblRentaPorCliente.Size = new System.Drawing.Size(247, 40);
+            this.lblRentaPorCliente.Size = new System.Drawing.Size(198, 31);
             this.lblRentaPorCliente.TabIndex = 0;
             this.lblRentaPorCliente.Text = "Renta Por Cliente";
             // 
             // lblIDRenta
             // 
+<<<<<<< HEAD
             this.lblIDRenta.AutoSize = true;
             this.lblIDRenta.Location = new System.Drawing.Point(297, 105);
             this.lblIDRenta.Name = "lblIDRenta";
             this.lblIDRenta.Size = new System.Drawing.Size(87, 25);
             this.lblIDRenta.TabIndex = 5;
             this.lblIDRenta.Text = "ID Renta";
+=======
+            this.lblIDCliente.AutoSize = true;
+            this.lblIDCliente.Location = new System.Drawing.Point(12, 102);
+            this.lblIDCliente.Name = "lblIDCliente";
+            this.lblIDCliente.Size = new System.Drawing.Size(79, 20);
+            this.lblIDCliente.TabIndex = 1;
+            this.lblIDCliente.Text = "ID Cliente";
+            this.lblIDCliente.Click += new System.EventHandler(this.label1_Click_1);
+>>>>>>> a42596afc5e35dd5dfe52183ccb0536053f45e96
             // 
             // txtIDRenta
             // 
+<<<<<<< HEAD
             this.txtIDRenta.Location = new System.Drawing.Point(424, 102);
             this.txtIDRenta.Multiline = true;
             this.txtIDRenta.Name = "txtIDRenta";
             this.txtIDRenta.Size = new System.Drawing.Size(206, 37);
             this.txtIDRenta.TabIndex = 12;
+=======
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(12, 163);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(65, 20);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(12, 237);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(71, 20);
+            this.lblTelefono.TabIndex = 3;
+            this.lblTelefono.Text = "Teléfono";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 316);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
+            this.lblDescripcion.TabIndex = 4;
+            this.lblDescripcion.Text = "Descripcion";
+            // 
+            // lblIDProducto
+            // 
+            this.lblIDProducto.AutoSize = true;
+            this.lblIDProducto.Location = new System.Drawing.Point(466, 102);
+            this.lblIDProducto.Name = "lblIDProducto";
+            this.lblIDProducto.Size = new System.Drawing.Size(94, 20);
+            this.lblIDProducto.TabIndex = 5;
+            this.lblIDProducto.Text = "ID Producto";
+            // 
+            // lblNombreProducto
+            // 
+            this.lblNombreProducto.AutoSize = true;
+            this.lblNombreProducto.Location = new System.Drawing.Point(466, 166);
+            this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(158, 20);
+            this.lblNombreProducto.TabIndex = 6;
+            this.lblNombreProducto.Text = "Nombre del Producto";
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(466, 240);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(132, 20);
+            this.lblCantidad.TabIndex = 7;
+            this.lblCantidad.Text = "Cantidad rentada";
+            // 
+            // txtIDCliente
+            // 
+            this.txtIDCliente.Location = new System.Drawing.Point(115, 102);
+            this.txtIDCliente.Multiline = true;
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.Size = new System.Drawing.Size(238, 35);
+            this.txtIDCliente.TabIndex = 8;
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(115, 163);
+            this.txtNombreCliente.Multiline = true;
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(238, 34);
+            this.txtNombreCliente.TabIndex = 9;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(115, 237);
+            this.txtTelefono.Multiline = true;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(238, 40);
+            this.txtTelefono.TabIndex = 10;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(132, 316);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(741, 140);
+            this.txtDescripcion.TabIndex = 11;
+            // 
+            // txtIDProducto
+            // 
+            this.txtIDProducto.Location = new System.Drawing.Point(667, 99);
+            this.txtIDProducto.Multiline = true;
+            this.txtIDProducto.Name = "txtIDProducto";
+            this.txtIDProducto.Size = new System.Drawing.Size(206, 37);
+            this.txtIDProducto.TabIndex = 12;
+            // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.Location = new System.Drawing.Point(667, 163);
+            this.txtNombreProducto.Multiline = true;
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(206, 47);
+            this.txtNombreProducto.TabIndex = 13;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(667, 237);
+            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(206, 40);
+            this.txtCantidad.TabIndex = 14;
+>>>>>>> a42596afc5e35dd5dfe52183ccb0536053f45e96
             // 
             // btnVolver
             // 
@@ -107,9 +227,14 @@
             this.Column3,
             this.Column5,
             this.Column6,
+<<<<<<< HEAD
             this.Column8,
             this.Column9});
             this.dgvRenta.Location = new System.Drawing.Point(17, 308);
+=======
+            this.Column7});
+            this.dgvRenta.Location = new System.Drawing.Point(70, 586);
+>>>>>>> a42596afc5e35dd5dfe52183ccb0536053f45e96
             this.dgvRenta.Name = "dgvRenta";
             this.dgvRenta.ReadOnly = true;
             this.dgvRenta.RowHeadersWidth = 51;
@@ -192,7 +317,7 @@
             // 
             // frmRentasPorCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1082, 1055);

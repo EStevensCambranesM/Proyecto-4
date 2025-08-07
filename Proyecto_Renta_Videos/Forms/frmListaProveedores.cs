@@ -16,5 +16,12 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
         }
+
+        private void regresoAMenùToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal IraMenu = new frmMenuPrincipal(); 
+            IraMenu.Show();
+            this.Hide();
+        }
     }
 }

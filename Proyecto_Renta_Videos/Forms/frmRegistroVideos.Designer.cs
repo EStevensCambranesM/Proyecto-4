@@ -30,7 +30,6 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
-            this.lblClasificacion = new System.Windows.Forms.Label();
             this.lblanio = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblDisponible = new System.Windows.Forms.Label();
@@ -38,11 +37,12 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtAnio = new System.Windows.Forms.TextBox();
             this.cbGenero = new System.Windows.Forms.ComboBox();
-            this.cbClasificacion = new System.Windows.Forms.ComboBox();
             this.chkDisponible = new System.Windows.Forms.CheckBox();
             this.lblRegistroVideos = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tlsVolver = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -63,19 +63,10 @@
             this.lblGenero.TabIndex = 1;
             this.lblGenero.Text = "Género:";
             // 
-            // lblClasificacion
-            // 
-            this.lblClasificacion.AutoSize = true;
-            this.lblClasificacion.Location = new System.Drawing.Point(142, 244);
-            this.lblClasificacion.Name = "lblClasificacion";
-            this.lblClasificacion.Size = new System.Drawing.Size(101, 20);
-            this.lblClasificacion.TabIndex = 2;
-            this.lblClasificacion.Text = "Clasificación:";
-            // 
             // lblanio
             // 
             this.lblanio.AutoSize = true;
-            this.lblanio.Location = new System.Drawing.Point(142, 300);
+            this.lblanio.Location = new System.Drawing.Point(142, 245);
             this.lblanio.Name = "lblanio";
             this.lblanio.Size = new System.Drawing.Size(42, 20);
             this.lblanio.TabIndex = 3;
@@ -84,16 +75,16 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(142, 349);
+            this.lblPrecio.Location = new System.Drawing.Point(142, 298);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(109, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(57, 20);
             this.lblPrecio.TabIndex = 4;
-            this.lblPrecio.Text = "Precio por día:";
+            this.lblPrecio.Text = "Precio:";
             // 
             // lblDisponible
             // 
             this.lblDisponible.AutoSize = true;
-            this.lblDisponible.Location = new System.Drawing.Point(142, 409);
+            this.lblDisponible.Location = new System.Drawing.Point(142, 356);
             this.lblDisponible.Name = "lblDisponible";
             this.lblDisponible.Size = new System.Drawing.Size(101, 20);
             this.lblDisponible.TabIndex = 5;
@@ -108,14 +99,14 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(285, 346);
+            this.txtPrecio.Location = new System.Drawing.Point(285, 295);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(118, 26);
             this.txtPrecio.TabIndex = 7;
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(285, 294);
+            this.txtAnio.Location = new System.Drawing.Point(285, 239);
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(118, 26);
             this.txtAnio.TabIndex = 8;
@@ -129,19 +120,10 @@
             this.cbGenero.TabIndex = 9;
             this.cbGenero.SelectedIndexChanged += new System.EventHandler(this.cbGenero_SelectedIndexChanged);
             // 
-            // cbClasificacion
-            // 
-            this.cbClasificacion.FormattingEnabled = true;
-            this.cbClasificacion.Location = new System.Drawing.Point(285, 236);
-            this.cbClasificacion.Name = "cbClasificacion";
-            this.cbClasificacion.Size = new System.Drawing.Size(284, 28);
-            this.cbClasificacion.TabIndex = 10;
-            this.cbClasificacion.SelectedIndexChanged += new System.EventHandler(this.cbClasificacion_SelectedIndexChanged);
-            // 
             // chkDisponible
             // 
             this.chkDisponible.AutoSize = true;
-            this.chkDisponible.Location = new System.Drawing.Point(327, 413);
+            this.chkDisponible.Location = new System.Drawing.Point(297, 360);
             this.chkDisponible.Name = "chkDisponible";
             this.chkDisponible.Size = new System.Drawing.Size(15, 14);
             this.chkDisponible.TabIndex = 11;
@@ -159,7 +141,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(172, 473);
+            this.btnGuardar.Location = new System.Drawing.Point(285, 413);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(102, 31);
             this.btnGuardar.TabIndex = 13;
@@ -167,15 +149,22 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnCancelar
+            // menuStrip1
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(432, 473);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 31);
-            this.btnCancelar.TabIndex = 14;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsVolver});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(900, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tlsVolver
+            // 
+            this.tlsVolver.Name = "tlsVolver";
+            this.tlsVolver.Size = new System.Drawing.Size(97, 20);
+            this.tlsVolver.Text = "Volver al menú";
+            this.tlsVolver.Click += new System.EventHandler(this.tlsVolver_Click);
             // 
             // frmRegistroVideos
             // 
@@ -183,11 +172,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(900, 562);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblRegistroVideos);
             this.Controls.Add(this.chkDisponible);
-            this.Controls.Add(this.cbClasificacion);
             this.Controls.Add(this.cbGenero);
             this.Controls.Add(this.txtAnio);
             this.Controls.Add(this.txtPrecio);
@@ -195,7 +183,6 @@
             this.Controls.Add(this.lblDisponible);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblanio);
-            this.Controls.Add(this.lblClasificacion);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,6 +191,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistroVideos";
             this.Load += new System.EventHandler(this.frmRegistroVideos_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +202,6 @@
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblGenero;
-        private System.Windows.Forms.Label lblClasificacion;
         private System.Windows.Forms.Label lblanio;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblDisponible;
@@ -221,10 +209,10 @@
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtAnio;
         private System.Windows.Forms.ComboBox cbGenero;
-        private System.Windows.Forms.ComboBox cbClasificacion;
         private System.Windows.Forms.CheckBox chkDisponible;
         private System.Windows.Forms.Label lblRegistroVideos;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tlsVolver;
     }
 }

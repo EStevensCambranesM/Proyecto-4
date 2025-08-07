@@ -163,12 +163,6 @@
     <Compile Include="Forms\frmNewProveedor.Designer.cs">
       <DependentUpon>frmNewProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmNuevoCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmNuevoCliente.Designer.cs">
-      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmRegistrarRenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,9 +227,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMora.resx">
       <DependentUpon>frmMora.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmNuevoCliente.resx">
-      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegistrarRenta.resx">
       <DependentUpon>frmRegistrarRenta.cs</DependentUpon>
