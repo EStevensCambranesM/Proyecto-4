@@ -78,11 +78,6 @@ namespace Proyecto_Renta_Videos.Forms
             menuPrincipal.Show();
             this.Hide();
         }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

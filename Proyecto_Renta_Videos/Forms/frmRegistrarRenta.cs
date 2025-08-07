@@ -308,5 +308,6 @@ namespace Proyecto_Renta_Videos.Forms
                 MessageBox.Show("Error al registrar la renta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

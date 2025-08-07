@@ -71,7 +71,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.msVolver});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1222, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1222, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +79,7 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             this.msVolver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msVolver.Name = "msVolver";
-            this.msVolver.Size = new System.Drawing.Size(81, 32);
+            this.msVolver.Size = new System.Drawing.Size(66, 25);
             this.msVolver.Text = "Volver";
             this.msVolver.Click += new System.EventHandler(this.msVolver_Click);
             // 
@@ -89,7 +89,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(473, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 38);
+            this.label1.Size = new System.Drawing.Size(205, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Registrar Renta";
             // 
@@ -98,7 +98,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cliente";
             // 
@@ -107,7 +107,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.Location = new System.Drawing.Point(92, 155);
             this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Size = new System.Drawing.Size(193, 33);
+            this.cboCliente.Size = new System.Drawing.Size(193, 28);
             this.cboCliente.TabIndex = 3;
             // 
             // cbometodo_pago
@@ -118,7 +118,7 @@ namespace Proyecto_Renta_Videos.Forms
             "2"});
             this.cbometodo_pago.Location = new System.Drawing.Point(582, 155);
             this.cbometodo_pago.Name = "cbometodo_pago";
-            this.cbometodo_pago.Size = new System.Drawing.Size(193, 33);
+            this.cbometodo_pago.Size = new System.Drawing.Size(193, 28);
             this.cbometodo_pago.TabIndex = 5;
             // 
             // label3
@@ -126,7 +126,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(420, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 25);
+            this.label3.Size = new System.Drawing.Size(126, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Metodo de Pago";
             // 
@@ -135,7 +135,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(856, 158);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 25);
+            this.label4.Size = new System.Drawing.Size(157, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "¿Aplicar Descuento?";
             // 
@@ -144,7 +144,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.chkAplicar_desc.AutoSize = true;
             this.chkAplicar_desc.Location = new System.Drawing.Point(1056, 166);
             this.chkAplicar_desc.Name = "chkAplicar_desc";
-            this.chkAplicar_desc.Size = new System.Drawing.Size(18, 17);
+            this.chkAplicar_desc.Size = new System.Drawing.Size(15, 14);
             this.chkAplicar_desc.TabIndex = 7;
             this.chkAplicar_desc.UseVisualStyleBackColor = true;
             // 
@@ -153,7 +153,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(227, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 25);
+            this.label5.Size = new System.Drawing.Size(144, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Videos Disponibles";
             // 
@@ -172,7 +172,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(799, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 25);
+            this.label6.Size = new System.Drawing.Size(129, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Videos Añadidos";
             // 
@@ -181,7 +181,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(149, 401);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 25);
+            this.label7.Size = new System.Drawing.Size(73, 20);
             this.label7.TabIndex = 13;
             this.label7.Text = "Cantidad";
             // 
@@ -190,7 +190,11 @@ namespace Proyecto_Renta_Videos.Forms
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(246, 401);
             this.label8.Name = "label8";
+<<<<<<< HEAD
+            this.label8.Size = new System.Drawing.Size(20, 20);
+=======
             this.label8.Size = new System.Drawing.Size(0, 25);
+>>>>>>> 845a523bb4ac161674d8e4479c9e5906e551bdc5
             this.label8.TabIndex = 14;
             // 
             // label9
@@ -199,7 +203,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(558, 462);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(161, 29);
+            this.label9.Size = new System.Drawing.Size(125, 24);
             this.label9.TabIndex = 15;
             this.label9.Text = "Datos Factura";
             // 
@@ -208,7 +212,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(249, 519);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 25);
+            this.label10.Size = new System.Drawing.Size(117, 20);
             this.label10.TabIndex = 16;
             this.label10.Text = "Direccion Local";
             // 
@@ -216,14 +220,14 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             this.txtDireccion.Location = new System.Drawing.Point(415, 516);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(170, 30);
+            this.txtDireccion.Size = new System.Drawing.Size(170, 26);
             this.txtDireccion.TabIndex = 17;
             // 
             // txtNIT
             // 
             this.txtNIT.Location = new System.Drawing.Point(726, 516);
             this.txtNIT.Name = "txtNIT";
-            this.txtNIT.Size = new System.Drawing.Size(170, 30);
+            this.txtNIT.Size = new System.Drawing.Size(170, 26);
             this.txtNIT.TabIndex = 19;
             // 
             // label11
@@ -231,7 +235,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(657, 519);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 25);
+            this.label11.Size = new System.Drawing.Size(34, 20);
             this.label11.TabIndex = 18;
             this.label11.Text = "NIT";
             // 
@@ -240,7 +244,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(249, 574);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 25);
+            this.label12.Size = new System.Drawing.Size(114, 20);
             this.label12.TabIndex = 20;
             this.label12.Text = "Fecha Emision";
             // 
@@ -249,7 +253,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.fecha.AutoSize = true;
             this.fecha.Location = new System.Drawing.Point(410, 574);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(24, 25);
+            this.fecha.Size = new System.Drawing.Size(19, 20);
             this.fecha.TabIndex = 21;
             this.fecha.Text = "F";
             // 
@@ -258,7 +262,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.total.AutoSize = true;
             this.total.Location = new System.Drawing.Point(721, 574);
             this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(25, 25);
+            this.total.Size = new System.Drawing.Size(18, 20);
             this.total.TabIndex = 23;
             this.total.Text = "T";
             // 
@@ -267,7 +271,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(657, 574);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 25);
+            this.label14.Size = new System.Drawing.Size(44, 20);
             this.label14.TabIndex = 22;
             this.label14.Text = "Total";
             // 
@@ -346,7 +350,7 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             // frmRegistrarRenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1222, 703);
