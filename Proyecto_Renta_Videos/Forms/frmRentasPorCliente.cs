@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using Proyecto_Renta_Videos.ConexionBD;   // <-namespace de clsConexionBD
+using Proyecto_Renta_Videos.ConexionBD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,20 +12,16 @@ using System.Windows.Forms;
 using System.Drawing.Printing;  // para PrintDocument
 using System.IO;                // para Path
 
-
-
 namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmRentasPorCliente : Form
-
-
     {
         public frmRentasPorCliente()
         {
             InitializeComponent();
         }
 
-
+ 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal menu = new frmMenuPrincipal();
@@ -36,24 +32,24 @@ namespace Proyecto_Renta_Videos.Forms
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             // 1. Validar IdCliente
-            if (!int.TryParse(txtIDRenta.Text.Trim(), out int idCliente))
+            if (!int.TryParse(txtCliente.Text.Trim(), out int idCliente))
             {
                 MessageBox.Show("Ingrese un ID de cliente válido.", "ID Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // 2. Configurar columnas del DataGridView
-            dgvRenta.Columns.Clear();
-            dgvRenta.ColumnCount = 8;
-            dgvRenta.Columns[0].Name = "Nombre";
-            dgvRenta.Columns[1].Name = "Apellido";
-            dgvRenta.Columns[2].Name = "Cantidad Rentas";
-            dgvRenta.Columns[3].Name = "Factura #";
-            dgvRenta.Columns[4].Name = "NIT";
-            dgvRenta.Columns[5].Name = "Fecha Emisión";
-            dgvRenta.Columns[6].Name = "Precio Producto";
-            dgvRenta.Columns[7].Name = "Total Compra";
-            dgvRenta.Rows.Clear();
+            dgvRentaCliente.Columns.Clear();
+            dgvRentaCliente.ColumnCount = 8;
+            dgvRentaCliente.Columns[0].Name = "Nombre";
+            dgvRentaCliente.Columns[1].Name = "Apellido";
+            dgvRentaCliente.Columns[2].Name = "Cantidad Rentas";
+            dgvRentaCliente.Columns[3].Name = "Factura #";
+            dgvRentaCliente.Columns[4].Name = "NIT";
+            dgvRentaCliente.Columns[5].Name = "Fecha Emisión";
+            dgvRentaCliente.Columns[6].Name = "Precio Producto";
+            dgvRentaCliente.Columns[7].Name = "Total Compra";
+            dgvRentaCliente.Rows.Clear();
 
             // 3. Ejecutar consulta
             string sql = @"
@@ -87,7 +83,7 @@ namespace Proyecto_Renta_Videos.Forms
                     {
                         while (reader.Read())
                         {
-                            dgvRenta.Rows.Add(
+                            dgvRentaCliente.Rows.Add(
                                 reader["sNombre"].ToString(),
                                 reader["sApellido"].ToString(),
                                 reader["iCantidadRentas"].ToString(),
@@ -114,7 +110,7 @@ namespace Proyecto_Renta_Videos.Forms
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             // 1. Verificar que haya datos
-            if (dgvRenta.Rows.Count == 0)
+            if (dgvRentaCliente.Rows.Count == 0)
             {
                 MessageBox.Show("No hay datos para imprimir.", "Imprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -122,8 +118,8 @@ namespace Proyecto_Renta_Videos.Forms
 
             // 2. Crear el bitmap del DataGridView completo
             //    (asegúrate de que el grid tenga el tamaño suficiente o ajusta el Height)
-            var bmp = new Bitmap(dgvRenta.Width, dgvRenta.Height);
-            dgvRenta.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+            var bmp = new Bitmap(dgvRentaCliente.Width, dgvRentaCliente.Height);
+            dgvRentaCliente.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
 
             // 3. Configurar PrintDocument
             var pd = new PrintDocument();
@@ -141,7 +137,7 @@ namespace Proyecto_Renta_Videos.Forms
 
             // Ruta donde quieres guardar el PDF
             string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string nombre = $"Renta_Cliente_{txtIDRenta.Text}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
+            string nombre = $"Renta_Cliente_{txtCliente.Text}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
             pd.PrinterSettings.PrintFileName = Path.Combine(escritorio, nombre);
 
             try
@@ -156,5 +152,5 @@ namespace Proyecto_Renta_Videos.Forms
             }
         }
     }
-}
+    }
 
