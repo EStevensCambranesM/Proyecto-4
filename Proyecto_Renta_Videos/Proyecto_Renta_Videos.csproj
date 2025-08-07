@@ -127,11 +127,11 @@
     <Compile Include="Forms\frmInventarioDisponible.Designer.cs">
       <DependentUpon>frmInventarioDisponible.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmListaProveedores.cs">
+    <Compile Include="Forms\frmListaProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmListaProveedores.Designer.cs">
-      <DependentUpon>frmListaProveedores.cs</DependentUpon>
+    <Compile Include="Forms\frmListaProveedor.Designer.cs">
+      <DependentUpon>frmListaProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -213,8 +213,8 @@
     <EmbeddedResource Include="Forms\frmInventarioDisponible.resx">
       <DependentUpon>frmInventarioDisponible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmListaProveedores.resx">
-      <DependentUpon>frmListaProveedores.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmListaProveedor.resx">
+      <DependentUpon>frmListaProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>

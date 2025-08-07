@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCompra = new System.Windows.Forms.Label();
+            this.lblProducto = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.Label();
             this.txtfecha = new System.Windows.Forms.Label();
@@ -39,23 +39,27 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.regresarAMenùToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.cboProveedores = new System.Windows.Forms.ComboBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtCompra
+            // lblProducto
             // 
-            this.txtCompra.AutoSize = true;
-            this.txtCompra.Location = new System.Drawing.Point(138, 92);
-            this.txtCompra.Name = "txtCompra";
-            this.txtCompra.Size = new System.Drawing.Size(61, 16);
-            this.txtCompra.TabIndex = 0;
-            this.txtCompra.Text = "Producto";
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Location = new System.Drawing.Point(80, 86);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(103, 27);
+            this.lblProducto.TabIndex = 0;
+            this.lblProducto.Text = "Producto";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(132, 116);
+            this.textBox1.Location = new System.Drawing.Point(85, 116);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 30);
             this.textBox1.TabIndex = 1;
@@ -63,25 +67,28 @@
             // txtPrecio
             // 
             this.txtPrecio.AutoSize = true;
-            this.txtPrecio.Location = new System.Drawing.Point(138, 177);
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(82, 177);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(46, 16);
+            this.txtPrecio.Size = new System.Drawing.Size(102, 27);
             this.txtPrecio.TabIndex = 2;
-            this.txtPrecio.Text = "Precio";
+            this.txtPrecio.Text = "Cantidad";
             // 
             // txtfecha
             // 
             this.txtfecha.AutoSize = true;
-            this.txtfecha.Location = new System.Drawing.Point(138, 279);
+            this.txtfecha.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Location = new System.Drawing.Point(84, 279);
             this.txtfecha.Name = "txtfecha";
-            this.txtfecha.Size = new System.Drawing.Size(45, 16);
+            this.txtfecha.Size = new System.Drawing.Size(97, 27);
             this.txtfecha.TabIndex = 3;
-            this.txtfecha.Text = "Fecha";
+            this.txtfecha.Text = "Subtotal";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(562, 135);
+            this.dataGridView1.Location = new System.Drawing.Point(540, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -92,7 +99,7 @@
             // 
             this.txtListaCompra.AutoSize = true;
             this.txtListaCompra.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtListaCompra.Location = new System.Drawing.Point(687, 92);
+            this.txtListaCompra.Location = new System.Drawing.Point(671, 86);
             this.txtListaCompra.Name = "txtListaCompra";
             this.txtListaCompra.Size = new System.Drawing.Size(172, 27);
             this.txtListaCompra.TabIndex = 5;
@@ -112,7 +119,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(132, 196);
+            this.textBox2.Location = new System.Drawing.Point(85, 207);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(154, 30);
             this.textBox2.TabIndex = 7;
@@ -120,7 +127,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(132, 298);
+            this.textBox3.Location = new System.Drawing.Point(85, 309);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(154, 30);
             this.textBox3.TabIndex = 8;
@@ -139,9 +146,38 @@
             // regresarAMenùToolStripMenuItem
             // 
             this.regresarAMenùToolStripMenuItem.Name = "regresarAMenùToolStripMenuItem";
-            this.regresarAMenùToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.regresarAMenùToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.regresarAMenùToolStripMenuItem.Text = "Regresar a menù";
             this.regresarAMenùToolStripMenuItem.Click += new System.EventHandler(this.regresarAMenùToolStripMenuItem_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(85, 393);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(133, 41);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // cboProveedores
+            // 
+            this.cboProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProveedores.FormattingEnabled = true;
+            this.cboProveedores.Location = new System.Drawing.Point(288, 113);
+            this.cboProveedores.Name = "cboProveedores";
+            this.cboProveedores.Size = new System.Drawing.Size(159, 33);
+            this.cboProveedores.TabIndex = 11;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Location = new System.Drawing.Point(294, 83);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(116, 27);
+            this.lblProveedor.TabIndex = 12;
+            this.lblProveedor.Text = "Proveedor";
             // 
             // frmCompra
             // 
@@ -149,6 +185,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1012, 524);
+            this.Controls.Add(this.lblProveedor);
+            this.Controls.Add(this.cboProveedores);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtCompras);
@@ -157,7 +196,7 @@
             this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtCompra);
+            this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCompra";
@@ -172,7 +211,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label txtCompra;
+        private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtPrecio;
         private System.Windows.Forms.Label txtfecha;
@@ -183,5 +222,8 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem regresarAMenùToolStripMenuItem;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ComboBox cboProveedores;
+        private System.Windows.Forms.Label lblProveedor;
     }
 }
