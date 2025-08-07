@@ -52,16 +52,13 @@ namespace Proyecto_Renta_Videos.Forms
             this.total = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodVideo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvVideos = new System.Windows.Forms.DataGridView();
             this.dgvAgregarrenta = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodVideoPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDescripcionFK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cFormato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminarVideo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgregarrenta)).BeginInit();
@@ -117,8 +114,8 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             this.cbometodo_pago.FormattingEnabled = true;
             this.cbometodo_pago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta"});
+            "1",
+            "2"});
             this.cbometodo_pago.Location = new System.Drawing.Point(582, 155);
             this.cbometodo_pago.Name = "cbometodo_pago";
             this.cbometodo_pago.Size = new System.Drawing.Size(193, 28);
@@ -168,6 +165,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label6
             // 
@@ -192,9 +190,12 @@ namespace Proyecto_Renta_Videos.Forms
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(246, 401);
             this.label8.Name = "label8";
+<<<<<<< HEAD
             this.label8.Size = new System.Drawing.Size(20, 20);
+=======
+            this.label8.Size = new System.Drawing.Size(0, 25);
+>>>>>>> 845a523bb4ac161674d8e4479c9e5906e551bdc5
             this.label8.TabIndex = 14;
-            this.label8.Text = "C";
             // 
             // label9
             // 
@@ -284,42 +285,14 @@ namespace Proyecto_Renta_Videos.Forms
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Formato
-            // 
-            this.Formato.HeaderText = "Formato";
-            this.Formato.MinimumWidth = 6;
-            this.Formato.Name = "Formato";
-            this.Formato.Width = 125;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 125;
-            // 
-            // CodVideo
-            // 
-            this.CodVideo.HeaderText = "CodVideo";
-            this.CodVideo.MinimumWidth = 6;
-            this.CodVideo.Name = "CodVideo";
-            this.CodVideo.Width = 125;
-            // 
             // dgvVideos
             // 
             this.dgvVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVideos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodVideo,
-            this.Descripcion,
-            this.Formato,
-            this.Nombre});
+            this.CodVideoPK,
+            this.iDescripcionFK,
+            this.cFormato,
+            this.sNombre});
             this.dgvVideos.Location = new System.Drawing.Point(638, 237);
             this.dgvVideos.Name = "dgvVideos";
             this.dgvVideos.RowHeadersWidth = 51;
@@ -330,11 +303,6 @@ namespace Proyecto_Renta_Videos.Forms
             // dgvAgregarrenta
             // 
             this.dgvAgregarrenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgregarrenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
             this.dgvAgregarrenta.Location = new System.Drawing.Point(18, 237);
             this.dgvAgregarrenta.Name = "dgvAgregarrenta";
             this.dgvAgregarrenta.RowHeadersWidth = 51;
@@ -342,33 +310,43 @@ namespace Proyecto_Renta_Videos.Forms
             this.dgvAgregarrenta.Size = new System.Drawing.Size(558, 150);
             this.dgvAgregarrenta.TabIndex = 25;
             // 
-            // dataGridViewTextBoxColumn1
+            // CodVideoPK
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "CodVideo";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.CodVideoPK.HeaderText = "CodVideo";
+            this.CodVideoPK.MinimumWidth = 6;
+            this.CodVideoPK.Name = "CodVideoPK";
+            this.CodVideoPK.Width = 125;
             // 
-            // dataGridViewTextBoxColumn2
+            // iDescripcionFK
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.iDescripcionFK.HeaderText = "Descripcion";
+            this.iDescripcionFK.MinimumWidth = 6;
+            this.iDescripcionFK.Name = "iDescripcionFK";
+            this.iDescripcionFK.Width = 125;
             // 
-            // dataGridViewTextBoxColumn3
+            // cFormato
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Formato";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.cFormato.HeaderText = "Formato";
+            this.cFormato.MinimumWidth = 6;
+            this.cFormato.Name = "cFormato";
+            this.cFormato.Width = 125;
             // 
-            // dataGridViewTextBoxColumn4
+            // sNombre
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.sNombre.HeaderText = "Nombre";
+            this.sNombre.MinimumWidth = 6;
+            this.sNombre.Name = "sNombre";
+            this.sNombre.Width = 125;
+            // 
+            // btnEliminarVideo
+            // 
+            this.btnEliminarVideo.Location = new System.Drawing.Point(897, 397);
+            this.btnEliminarVideo.Name = "btnEliminarVideo";
+            this.btnEliminarVideo.Size = new System.Drawing.Size(97, 37);
+            this.btnEliminarVideo.TabIndex = 26;
+            this.btnEliminarVideo.Text = "Eliminar";
+            this.btnEliminarVideo.UseVisualStyleBackColor = true;
+            this.btnEliminarVideo.Click += new System.EventHandler(this.btnEliminarVideo_Click);
             // 
             // frmRegistrarRenta
             // 
@@ -376,6 +354,7 @@ namespace Proyecto_Renta_Videos.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1222, 703);
+            this.Controls.Add(this.btnEliminarVideo);
             this.Controls.Add(this.dgvAgregarrenta);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.total);
@@ -443,15 +422,12 @@ namespace Proyecto_Renta_Videos.Forms
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Formato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodVideo;
         private System.Windows.Forms.DataGridView dgvVideos;
         private System.Windows.Forms.DataGridView dgvAgregarrenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodVideoPK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDescripcionFK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cFormato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNombre;
+        private System.Windows.Forms.Button btnEliminarVideo;
     }
 }
