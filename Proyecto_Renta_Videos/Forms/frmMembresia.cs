@@ -55,9 +55,29 @@ namespace Proyecto_Renta_Videos.Forms
             chkActiva.Checked = true;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void tlsVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmMenuPrincipal RegresoMenu = new frmMenuPrincipal();
+            RegresoMenu.Show();
+            this.Hide();
+        }
+
+        private void dtpFechaCreacion_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFechaCreacion.Value = DateTime.Today;
+        }
+
+        private void dtpFechaVencimiento_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFechaVencimiento.Value = dtpFechaCreacion.Value.AddDays((int)numDuracion.Value);
+            dtpFechaVencimiento.Enabled = false;
+        }
+
+        private void numDuracion_ValueChanged(object sender, EventArgs e)
+        {
+            int dias = (int)numDuracion.Value;
+            dtpFechaVencimiento.Value = dtpFechaCreacion.Value.AddDays(dias);
+
         }
     }
 }
