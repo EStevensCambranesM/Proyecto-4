@@ -46,5 +46,10 @@ namespace Proyecto_Renta_Videos.ConexionBD
                 Conexion.Close();
             }
         }
+
+        internal static MySqlConnection Conectar()
+        {
+            return ObtenerConexion();
+        }
     }
 }

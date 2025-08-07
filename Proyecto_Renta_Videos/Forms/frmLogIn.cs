@@ -75,5 +75,11 @@ namespace Proyecto_Renta_Videos.Forms
                 }
             }
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '●'; 
+
+        }
     }
 }
