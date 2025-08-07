@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Proyecto_Renta_Videos.ConexionBD;  // tu clsConexionBD
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+using System.IO;
 
 namespace Proyecto_Renta_Videos.Forms
 {
@@ -17,25 +21,6 @@ namespace Proyecto_Renta_Videos.Forms
             InitializeComponent();
         }
 
-        private void frmInventarioDisponible_Load(object sender, EventArgs e)
-        {
-            dgvInventario.ColumnCount = 9;
-            dgvInventario.Columns[0].Name = "ID Producto";
-            dgvInventario.Columns[1].Name = "Nombre";
-            dgvInventario.Columns[2].Name = "Categoría";
-            dgvInventario.Columns[3].Name = "Stock";
-            dgvInventario.Columns[4].Name = "Precio";
-            dgvInventario.Columns[5].Name = "Proveedor";
-            dgvInventario.Columns[6].Name = "Fecha Ingreso";
-            dgvInventario.Columns[7].Name = "Estado";
-            dgvInventario.Columns[8].Name = "Descripción";
-        }
-
-        private void dgvInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal menu = new frmMenuPrincipal();
@@ -43,39 +28,130 @@ namespace Proyecto_Renta_Videos.Forms
             this.Close();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtID.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
+            // 1. Validar ID Inventario
+            if (!int.TryParse(txtInventarioDisponible.Text.Trim(), out int idInventario))
             {
-                MessageBox.Show("Por favor completa al menos el ID y el Nombre del producto.");
+                MessageBox.Show("Ingrese un ID de inventario válido.", "ID Inválido",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Agregar fila al DataGridView
-            dgvInventario.Rows.Add(
-                txtID.Text,
-                txtNombre.Text,
-                txtCategoria.Text,
-                txtStock.Text,
-                txtPrecio.Text,
-                txtProveedor.Text,
-                txtFecha.Text,
-                txtEstado.Text,
-                txtDescripcion.Text
-            );
+            // 2. Configurar columnas del DataGridView
+            dgvInventario.Columns.Clear();
+            dgvInventario.ColumnCount = 9;
+            dgvInventario.Columns[0].Name = "Renta";
+            dgvInventario.Columns[1].Name = "Cod Video";
+            dgvInventario.Columns[2].Name = "Detalle Compras";
+            dgvInventario.Columns[3].Name = "Cantidad Disponible";
+            dgvInventario.Columns[4].Name = "Estado";
+            dgvInventario.Columns[5].Name = "F Renta";
+            dgvInventario.Columns[6].Name = "F Devolucion";
+            dgvInventario.Columns[7].Name = "Precio Renta";
+            dgvInventario.Columns[8].Name = "Precio Perdida";
+            dgvInventario.Rows.Clear();
 
-            MessageBox.Show("¡Datos agregados exitosamente!");
+            // 3. Consulta SQL
+            string sql = @"
+                SELECT 
+                  iRentaFK,
+                  iCodVideoFK,
+                  iDetalleComprasFK,
+                  iCantidadDisponible,
+                  cEstado,
+                  dFechaRenta,
+                  dFechaDevolucion,
+                  dcPrecioRenta,
+                  dcPrecioPerdida
+                FROM tblInventario
+                WHERE IdInventarioPK = @id;
+            ";
 
-            // Limpiar los campos (opcional)
-            txtID.Clear();
-            txtNombre.Clear();
-            txtCategoria.Clear();
-            txtStock.Clear();
-            txtPrecio.Clear();
-            txtProveedor.Clear();
-            txtFecha.Clear();
-            txtEstado.Clear();
-            txtDescripcion.Clear();
+            MySqlConnection conn = null;
+            try
+            {
+                conn = clsConexionBD.ObtenerConexion();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", idInventario);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            dgvInventario.Rows.Add(
+                                reader["iRentaFK"].ToString(),
+                                reader["iCodVideoFK"].ToString(),
+                                reader["iDetalleComprasFK"].ToString(),
+                                reader["iCantidadDisponible"].ToString(),
+                                reader["cEstado"].ToString(),
+                                Convert.ToDateTime(reader["dFechaRenta"]).ToString("yyyy-MM-dd"),
+                                Convert.ToDateTime(reader["dFechaDevolucion"]).ToString("yyyy-MM-dd"),
+                                reader["dcPrecioRenta"].ToString(),
+                                reader["dcPrecioPerdida"].ToString()
+                            );
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al consultar inventario:\n{ex.Message}",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                clsConexionBD.CerrarConexion();
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            // 1. Verificar que haya datos en el grid
+            if (dgvInventario.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay datos para imprimir.", "Imprimir",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // 2. Capturar el DataGridView como bitmap
+            var ancho = dgvInventario.Width;
+            var alto = dgvInventario.Height;
+            var bmp = new Bitmap(ancho, alto);
+            dgvInventario.DrawToBitmap(bmp, new Rectangle(0, 0, ancho, alto));
+
+            // 3. Configurar el PrintDocument
+            var pd = new PrintDocument
+            {
+                DefaultPageSettings = { Landscape = true }  // horizontal si lo deseas
+            };
+            pd.PrintPage += (s, ev) =>
+            {
+                // Ajusta escala si cabe demasiado grande:
+                ev.Graphics.DrawImage(bmp, 0, 0, ancho * 0.9f, alto * 0.9f);
+            };
+
+            // 4. Imprimir a PDF
+            pd.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+            pd.PrinterSettings.PrintToFile = true;
+            // ruta donde se guardará el PDF
+            string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string nombre = $"Inventario_{txtInventarioDisponible.Text}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
+            pd.PrinterSettings.PrintFileName = Path.Combine(escritorio, nombre);
+
+            try
+            {
+                pd.Print();
+                MessageBox.Show($"PDF generado en:\n{pd.PrinterSettings.PrintFileName}",
+                                "Imprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al imprimir:\n{ex.Message}",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
