@@ -34,16 +34,14 @@
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvMora = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAplicar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
             this.IdRenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dias_atraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnAplicar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMora)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +82,7 @@
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(193, 33);
             this.cboCliente.TabIndex = 7;
+            this.cboCliente.SelectedIndexChanged += new System.EventHandler(this.cboCliente_SelectedIndexChanged_1);
             // 
             // label2
             // 
@@ -109,53 +108,6 @@
             this.dgvMora.RowTemplate.Height = 24;
             this.dgvMora.Size = new System.Drawing.Size(679, 150);
             this.dgvMora.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(373, 193);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 25);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Rentas con Mora";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(438, 394);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 25);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "A";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(258, 394);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 25);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Dias de Atraso:";
-            // 
-            // btnAplicar
-            // 
-            this.btnAplicar.Location = new System.Drawing.Point(263, 441);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(104, 65);
-            this.btnAplicar.TabIndex = 32;
-            this.btnAplicar.Text = "Aplicar Multa";
-            this.btnAplicar.UseVisualStyleBackColor = true;
-            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(485, 441);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(104, 65);
-            this.btnQuitar.TabIndex = 33;
-            this.btnQuitar.Text = "Quitar Mora";
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // IdRenta
             // 
@@ -192,6 +144,35 @@
             this.Dias_atraso.Name = "Dias_atraso";
             this.Dias_atraso.Width = 125;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(373, 193);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 25);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Rentas con Mora";
+            // 
+            // btnAplicar
+            // 
+            this.btnAplicar.Location = new System.Drawing.Point(263, 441);
+            this.btnAplicar.Name = "btnAplicar";
+            this.btnAplicar.Size = new System.Drawing.Size(104, 65);
+            this.btnAplicar.TabIndex = 32;
+            this.btnAplicar.Text = "Aplicar Multa";
+            this.btnAplicar.UseVisualStyleBackColor = true;
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(485, 441);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(104, 65);
+            this.btnQuitar.TabIndex = 33;
+            this.btnQuitar.Text = "Quitar Mora";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
             // frmMora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -200,8 +181,6 @@
             this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnAplicar);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvMora);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboCliente);
@@ -214,6 +193,7 @@
             this.Name = "frmMora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMora";
+            this.Load += new System.EventHandler(this.frmMora_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMora)).EndInit();
@@ -231,8 +211,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvMora;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAplicar;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdRenta;
