@@ -106,7 +106,20 @@ namespace Proyecto_Renta_Videos.Forms
         private void msRegreso_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal Regresar = new frmMenuPrincipal();
-            Regresar.Show();
+            this.Close();
+
+            // Cerrar frmMenuPrincipal si ya está abierto
+            foreach (Form frm in Application.OpenForms.Cast<Form>().ToList())
+            {
+                if (frm.Name == "frmMenuPrincipal")
+                {
+                    frm.Close();
+                }
+            }
+
+            // Abrir una nueva instancia del menú principal
+            frmMenuPrincipal nuevoMenu = new frmMenuPrincipal();
+            nuevoMenu.Show();
         }
     }
 }
