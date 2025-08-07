@@ -62,7 +62,7 @@
             this.lblRentaPorCliente.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentaPorCliente.Location = new System.Drawing.Point(355, 9);
             this.lblRentaPorCliente.Name = "lblRentaPorCliente";
-            this.lblRentaPorCliente.Size = new System.Drawing.Size(247, 40);
+            this.lblRentaPorCliente.Size = new System.Drawing.Size(198, 31);
             this.lblRentaPorCliente.TabIndex = 0;
             this.lblRentaPorCliente.Text = "Renta Por Cliente";
             this.lblRentaPorCliente.Click += new System.EventHandler(this.lblRentaPorCliente_Click);
@@ -72,7 +72,7 @@
             this.lblIDCliente.AutoSize = true;
             this.lblIDCliente.Location = new System.Drawing.Point(12, 102);
             this.lblIDCliente.Name = "lblIDCliente";
-            this.lblIDCliente.Size = new System.Drawing.Size(97, 25);
+            this.lblIDCliente.Size = new System.Drawing.Size(79, 20);
             this.lblIDCliente.TabIndex = 1;
             this.lblIDCliente.Text = "ID Cliente";
             this.lblIDCliente.Click += new System.EventHandler(this.label1_Click_1);
@@ -82,7 +82,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(12, 163);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblNombre.Size = new System.Drawing.Size(65, 20);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -91,7 +91,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(12, 237);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(89, 25);
+            this.lblTelefono.Size = new System.Drawing.Size(71, 20);
             this.lblTelefono.TabIndex = 3;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -100,7 +100,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(12, 316);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(114, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcion.TabIndex = 4;
             this.lblDescripcion.Text = "Descripcion";
             // 
@@ -109,7 +109,7 @@
             this.lblIDProducto.AutoSize = true;
             this.lblIDProducto.Location = new System.Drawing.Point(466, 102);
             this.lblIDProducto.Name = "lblIDProducto";
-            this.lblIDProducto.Size = new System.Drawing.Size(114, 25);
+            this.lblIDProducto.Size = new System.Drawing.Size(94, 20);
             this.lblIDProducto.TabIndex = 5;
             this.lblIDProducto.Text = "ID Producto";
             // 
@@ -118,7 +118,7 @@
             this.lblNombreProducto.AutoSize = true;
             this.lblNombreProducto.Location = new System.Drawing.Point(466, 166);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(195, 25);
+            this.lblNombreProducto.Size = new System.Drawing.Size(158, 20);
             this.lblNombreProducto.TabIndex = 6;
             this.lblNombreProducto.Text = "Nombre del Producto";
             // 
@@ -127,7 +127,7 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Location = new System.Drawing.Point(466, 240);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(162, 25);
+            this.lblCantidad.Size = new System.Drawing.Size(132, 20);
             this.lblCantidad.TabIndex = 7;
             this.lblCantidad.Text = "Cantidad rentada";
             // 
@@ -220,7 +220,7 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dgvRenta.Location = new System.Drawing.Point(72, 602);
+            this.dgvRenta.Location = new System.Drawing.Point(70, 586);
             this.dgvRenta.Name = "dgvRenta";
             this.dgvRenta.ReadOnly = true;
             this.dgvRenta.RowHeadersWidth = 51;
@@ -279,7 +279,7 @@
             // 
             // frmRentasPorCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1082, 1055);

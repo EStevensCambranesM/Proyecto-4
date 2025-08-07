@@ -78,13 +78,6 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
-        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // nuevo cliente
-            frmNuevoCliente nuevoCliente = new frmNuevoCliente();
-            nuevoCliente.Show();
-        }
-
         private void membresíasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // formulario membresía

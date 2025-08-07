@@ -134,9 +134,16 @@ namespace Proyecto_Renta_Videos.Forms
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+
+        }
+
+        private void tlsVolver_Click(object sender, EventArgs e)
+        {
+                frmMenuPrincipal RegresoMenu = new frmMenuPrincipal();
+                RegresoMenu.Show();
+                this.Hide();
         }
     }
 }
