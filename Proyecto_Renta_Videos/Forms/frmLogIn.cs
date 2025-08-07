@@ -20,7 +20,10 @@ namespace Proyecto_Renta_Videos.Forms
         {
             InitializeComponent();
             this.AcceptButton = btnInicioSesion;
+<<<<<<< HEAD
             DotEnv.Load(); // var de entorno
+=======
+>>>>>>> f7f25bebdb30723b377a669c33fe58a9672bea1d
         }
 
         private void btnInicioSesion_Click(object sender, EventArgs e)

@@ -40,14 +40,16 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tlsVolver = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(76, 52);
+            this.lblBuscar.Location = new System.Drawing.Point(76, 113);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(101, 20);
             this.lblBuscar.TabIndex = 0;
@@ -56,21 +58,21 @@
             // dgvInventario
             // 
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Location = new System.Drawing.Point(114, 203);
+            this.dgvInventario.Location = new System.Drawing.Point(114, 245);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.Size = new System.Drawing.Size(728, 198);
             this.dgvInventario.TabIndex = 1;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(185, 52);
+            this.txtBuscar.Location = new System.Drawing.Point(185, 107);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(229, 26);
             this.txtBuscar.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(466, 46);
+            this.btnBuscar.Location = new System.Drawing.Point(466, 104);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnBuscar.Size = new System.Drawing.Size(116, 33);
@@ -82,7 +84,7 @@
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(76, 118);
+            this.lblGenero.Location = new System.Drawing.Point(76, 183);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(63, 20);
             this.lblGenero.TabIndex = 4;
@@ -91,7 +93,7 @@
             // cbGenero
             // 
             this.cbGenero.FormattingEnabled = true;
-            this.cbGenero.Location = new System.Drawing.Point(185, 116);
+            this.cbGenero.Location = new System.Drawing.Point(185, 183);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(229, 28);
             this.cbGenero.TabIndex = 5;
@@ -99,7 +101,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(462, 116);
+            this.lblEstado.Location = new System.Drawing.Point(462, 186);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(64, 20);
             this.lblEstado.TabIndex = 6;
@@ -109,14 +111,14 @@
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(554, 113);
+            this.cbEstado.Location = new System.Drawing.Point(563, 180);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(138, 28);
             this.cbEstado.TabIndex = 7;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(114, 446);
+            this.btnEditar.Location = new System.Drawing.Point(159, 476);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(116, 33);
             this.btnEditar.TabIndex = 8;
@@ -126,7 +128,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(324, 446);
+            this.btnEliminar.Location = new System.Drawing.Point(399, 476);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(116, 33);
             this.btnEliminar.TabIndex = 9;
@@ -136,7 +138,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(554, 446);
+            this.btnActualizar.Location = new System.Drawing.Point(637, 476);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(116, 33);
             this.btnActualizar.TabIndex = 10;
@@ -148,21 +150,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(375, 9);
+            this.label4.Location = new System.Drawing.Point(378, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "INVENTARIO";
             // 
-            // btnCancelar
+            // menuStrip1
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(764, 446);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(116, 33);
-            this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsVolver});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(960, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tlsVolver
+            // 
+            this.tlsVolver.Name = "tlsVolver";
+            this.tlsVolver.Size = new System.Drawing.Size(97, 20);
+            this.tlsVolver.Text = "Volver al menú";
+            this.tlsVolver.Click += new System.EventHandler(this.tlsVolver_Click);
             // 
             // frmInventario
             // 
@@ -170,7 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(960, 564);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
@@ -190,6 +199,8 @@
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +220,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tlsVolver;
     }
 }

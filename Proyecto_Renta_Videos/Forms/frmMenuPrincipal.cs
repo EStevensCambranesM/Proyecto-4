@@ -12,6 +12,7 @@ namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmMenuPrincipal : Form
     {
+
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -78,13 +79,6 @@ namespace Proyecto_Renta_Videos.Forms
             this.Hide();
         }
 
-        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // nuevo cliente
-            frmNuevoCliente nuevoCliente = new frmNuevoCliente();
-            nuevoCliente.Show();
-        }
-
         private void membresíasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // formulario membresía
@@ -149,13 +143,13 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void registroVideosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistroVideos registroVideos = new frmRegistroVideos();
-            registroVideos.Show();
+            frmRegistroVideos registro = new frmRegistroVideos(); 
+            registro.Show();
         }
 
         private void listaProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaProveedores listaProveedores = new frmListaProveedores();
+            frmListaProveedor listaProveedores = new frmListaProveedor();
             listaProveedores.Show();
         }
 
@@ -171,6 +165,11 @@ namespace Proyecto_Renta_Videos.Forms
             frmVerUsuarios verUsuarios = new frmVerUsuarios();
             verUsuarios.Show();
             this.Hide();
+        }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
