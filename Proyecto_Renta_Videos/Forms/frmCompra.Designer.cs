@@ -29,21 +29,24 @@
         private void InitializeComponent()
         {
             this.lblProducto = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProducto = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.Label();
             this.txtfecha = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCompras = new System.Windows.Forms.DataGridView();
             this.txtListaCompra = new System.Windows.Forms.Label();
             this.txtCompras = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.regresarAMenùToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.cboProveedores = new System.Windows.Forms.ComboBox();
             this.lblProveedor = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProducto
@@ -56,13 +59,13 @@
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
-            // textBox1
+            // txtProducto
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(85, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 30);
-            this.textBox1.TabIndex = 1;
+            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(85, 116);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(154, 30);
+            this.txtProducto.TabIndex = 1;
             // 
             // txtPrecio
             // 
@@ -84,16 +87,16 @@
             this.txtfecha.TabIndex = 3;
             this.txtfecha.Text = "Subtotal";
             // 
-            // dataGridView1
+            // dgvCompras
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(540, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(415, 344);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvCompras.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompras.Location = new System.Drawing.Point(540, 116);
+            this.dgvCompras.Name = "dgvCompras";
+            this.dgvCompras.RowHeadersWidth = 51;
+            this.dgvCompras.RowTemplate.Height = 24;
+            this.dgvCompras.Size = new System.Drawing.Size(415, 344);
+            this.dgvCompras.TabIndex = 4;
             // 
             // txtListaCompra
             // 
@@ -115,22 +118,15 @@
             this.txtCompras.Size = new System.Drawing.Size(289, 37);
             this.txtCompras.TabIndex = 6;
             this.txtCompras.Text = "Datos de la compra";
+            this.txtCompras.Click += new System.EventHandler(this.txtCompras_Click);
             // 
-            // textBox2
+            // txtSubtotal
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(85, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 30);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(85, 309);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 30);
-            this.textBox3.TabIndex = 8;
+            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotal.Location = new System.Drawing.Point(85, 309);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(154, 30);
+            this.txtSubtotal.TabIndex = 8;
             // 
             // menuStrip1
             // 
@@ -146,19 +142,20 @@
             // regresarAMenùToolStripMenuItem
             // 
             this.regresarAMenùToolStripMenuItem.Name = "regresarAMenùToolStripMenuItem";
-            this.regresarAMenùToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
+            this.regresarAMenùToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.regresarAMenùToolStripMenuItem.Text = "Regresar a menù";
             this.regresarAMenùToolStripMenuItem.Click += new System.EventHandler(this.regresarAMenùToolStripMenuItem_Click);
             // 
-            // btnGuardar
+            // btnAgregar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(85, 393);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(133, 41);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(35, 393);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(133, 41);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cboProveedores
             // 
@@ -179,31 +176,64 @@
             this.lblProveedor.TabIndex = 12;
             this.lblProveedor.Text = "Proveedor";
             // 
+            // nudCantidad
+            // 
+            this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCantidad.Location = new System.Drawing.Point(85, 216);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(154, 30);
+            this.nudCantidad.TabIndex = 13;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(185, 393);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(133, 41);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(338, 393);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(133, 41);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1012, 524);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.cboProveedores);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtSubtotal);
             this.Controls.Add(this.txtCompras);
             this.Controls.Add(this.txtListaCompra);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCompras);
             this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCompra";
             this.Text = "frmCompra";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,18 +242,20 @@
         #endregion
 
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label txtPrecio;
         private System.Windows.Forms.Label txtfecha;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCompras;
         private System.Windows.Forms.Label txtListaCompra;
         private System.Windows.Forms.Label txtCompras;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem regresarAMenùToolStripMenuItem;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox cboProveedores;
         private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
