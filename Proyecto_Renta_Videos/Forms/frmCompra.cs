@@ -29,9 +29,21 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void regresarAMenùToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal RegresoMenu = new frmMenuPrincipal();
-            RegresoMenu.Show();
-            this.Hide();
+            frmMenuPrincipal Menu = new frmMenuPrincipal();
+            this.Close();
+
+            // Cerrar frmMenuPrincipal si ya está abierto
+            foreach (Form frm in Application.OpenForms.Cast<Form>().ToList())
+            {
+                if (frm.Name == "frmMenuPrincipal")
+                {
+                    frm.Close();
+                }
+            }
+
+            // Abrir una nueva instancia del menú principal
+            frmMenuPrincipal nuevoMenu = new frmMenuPrincipal();
+            nuevoMenu.Show();
         }
 
         private void txtCompras_Click(object sender, EventArgs e)
