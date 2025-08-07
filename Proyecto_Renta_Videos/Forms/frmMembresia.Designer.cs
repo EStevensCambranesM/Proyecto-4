@@ -32,13 +32,11 @@
             this.lblDuracion = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblLimite = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.numDuracion = new System.Windows.Forms.NumericUpDown();
             this.numLimite = new System.Windows.Forms.NumericUpDown();
             this.chkActiva = new System.Windows.Forms.CheckBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -97,16 +95,6 @@
             this.lblLimite.TabIndex = 3;
             this.lblLimite.Text = "Cantidad de rentas:";
             // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(135, 510);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(92, 20);
-            this.lblDescripcion.TabIndex = 4;
-            this.lblDescripcion.Text = "Descripción";
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(328, 64);
@@ -150,18 +138,9 @@
             this.chkActiva.TabIndex = 9;
             this.chkActiva.UseVisualStyleBackColor = true;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(268, 510);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(372, 99);
-            this.txtDescripcion.TabIndex = 10;
-            // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(340, 619);
+            this.btnGuardar.Location = new System.Drawing.Point(318, 515);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 35);
@@ -253,7 +232,7 @@
             this.tlsVolver});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(945, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(911, 24);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -285,7 +264,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(945, 668);
+            this.ClientSize = new System.Drawing.Size(911, 585);
             this.Controls.Add(this.dtpFechaVencimiento);
             this.Controls.Add(this.dtpFechaCreacion);
             this.Controls.Add(this.label2);
@@ -297,13 +276,11 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.chkActiva);
             this.Controls.Add(this.numLimite);
             this.Controls.Add(this.numDuracion);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblLimite);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblDuracion);
@@ -330,13 +307,11 @@
         private System.Windows.Forms.Label lblDuracion;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblLimite;
-        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.NumericUpDown numDuracion;
         private System.Windows.Forms.NumericUpDown numLimite;
         private System.Windows.Forms.CheckBox chkActiva;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblApellido;

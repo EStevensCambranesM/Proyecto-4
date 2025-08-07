@@ -9,7 +9,7 @@ namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmInventario : Form
     {
-        
+
         List<Video> listaVideos = new List<Video>();
         int idActual = 1;
 
@@ -18,7 +18,7 @@ namespace Proyecto_Renta_Videos.Forms
             public int IdVideo { get; set; }
             public string Titulo { get; set; }
             public string Genero { get; set; }
-            public int Anio { get; set; }
+            public int Año { get; set; }
             public decimal Precio { get; set; }
             public string Estado { get; set; }
         }
@@ -54,12 +54,16 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void CargarEjemplos()
         {
-            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Matrix", Genero = "Acción", Anio = 1999, Precio = 15.00m, Estado = "Disponible" });
-            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Shrek", Genero = "Familiar", Anio = 2001, Precio = 12.00m, Estado = "Rentado" });
-            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "El Aro", Genero = "Terror", Anio = 2002, Precio = 10.00m, Estado = "Disponible" });
-            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Matrix", Genero = "Acción", Anio = 1999, Precio = 15.00m, Estado = "Disponible" });
-            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Shrek", Genero = "Familiar", Anio = 2001, Precio = 12.00m, Estado = "Rentado" });
-            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "El Aro", Genero = "Terror", Anio = 2002, Precio = 10.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Matrix", Genero = "Acción", Año = 1999, Precio = 15.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Shrek", Genero = "Familiar", Año = 2001, Precio = 12.00m, Estado = "Rentado" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "El Aro", Genero = "Terror", Año = 2002, Precio = 10.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Matrix", Genero = "Acción", Año = 1999, Precio = 15.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Shrek", Genero = "Familiar", Año = 2001, Precio = 12.00m, Estado = "Rentado" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "El Aro", Genero = "Terror", Año = 2002, Precio = 10.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Avatar", Genero = "Ciencia ficción", Año = 2009, Precio = 18.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Coco", Genero = "Animación", Año = 2017, Precio = 14.00m, Estado = "Disponible" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Joker", Genero = "Drama", Año = 2019, Precio = 20.00m, Estado = "Rentado" });
+            listaVideos.Add(new Video { IdVideo = idActual++, Titulo = "Jurassic Park", Genero = "Aventura", Año = 1993, Precio = 16.00m, Estado = "Disponible" });
         }
 
         private void MostrarInventario(List<Video> lista)
@@ -70,7 +74,7 @@ namespace Proyecto_Renta_Videos.Forms
                 v.IdVideo,
                 v.Titulo,
                 v.Genero,
-                v.Anio,
+                v.Año,
                 Precio = "Q" + v.Precio.ToString("F2"),
                 v.Estado
             }).ToList();
@@ -99,8 +103,8 @@ namespace Proyecto_Renta_Videos.Forms
                 return;
             }
 
-           // string titulo = dgvInventario.SelectedRows[0].Cells["Titulo"].Value.ToString();
-           // MessageBox.Show($"Aquí podrías abrir un formulario para editar: {titulo}", "Editar");
+            // string titulo = dgvInventario.SelectedRows[0].Cells["Titulo"].Value.ToString();
+            // MessageBox.Show($"Aquí podrías abrir un formulario para editar: {titulo}", "Editar");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -141,9 +145,9 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void tlsVolver_Click(object sender, EventArgs e)
         {
-                frmMenuPrincipal RegresoMenu = new frmMenuPrincipal();
-                RegresoMenu.Show();
-                this.Hide();
+            frmMenuPrincipal RegresoMenu = new frmMenuPrincipal();
+            RegresoMenu.Show();
+            this.Hide();
         }
     }
 }
