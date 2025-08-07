@@ -87,6 +87,11 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             // lblNombre
             // 
+            this.txtIDRenta.Location = new System.Drawing.Point(424, 102);
+            this.txtIDRenta.Multiline = true;
+            this.txtIDRenta.Name = "txtIDRenta";
+            this.txtIDRenta.Size = new System.Drawing.Size(206, 37);
+            this.txtIDRenta.TabIndex = 12;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(12, 163);
             this.lblNombre.Name = "lblNombre";
@@ -228,6 +233,11 @@ namespace Proyecto_Renta_Videos.Forms
             this.Column3,
             this.Column5,
             this.Column6,
+            this.Column8,
+            this.Column9});
+            this.dgvRenta.Location = new System.Drawing.Point(17, 308);
+            this.Column7});
+            this.dgvRenta.Location = new System.Drawing.Point(70, 586);
             this.Column8,
             this.Column9});
             this.dgvRenta.Location = new System.Drawing.Point(17, 308);
