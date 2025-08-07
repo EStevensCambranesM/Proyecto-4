@@ -32,7 +32,6 @@ namespace Proyecto_Renta_Videos.Forms
             int duracion = (int)numDuracion.Value;
             decimal precio;
             int limite = (int)numLimite.Value;
-            string descripcion = txtDescripcion.Text.Trim();
             bool activa = chkActiva.Checked;
 
             if (string.IsNullOrEmpty(nombre) || !decimal.TryParse(txtPrecio.Text, out precio))
@@ -51,7 +50,6 @@ namespace Proyecto_Renta_Videos.Forms
             numDuracion.Value = 30;
             txtPrecio.Clear();
             numLimite.Value = 5;
-            txtDescripcion.Clear();
             chkActiva.Checked = true;
         }
 
@@ -64,13 +62,18 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void dtpFechaCreacion_ValueChanged(object sender, EventArgs e)
         {
+            dtpFechaCreacion.Format = DateTimePickerFormat.Custom;
+            dtpFechaCreacion.Enabled = false;
             dtpFechaCreacion.Value = DateTime.Today;
+            dtpFechaCreacion.CustomFormat = "dd/MM/yyyy";
         }
 
         private void dtpFechaVencimiento_ValueChanged(object sender, EventArgs e)
         {
             dtpFechaVencimiento.Value = dtpFechaCreacion.Value.AddDays((int)numDuracion.Value);
             dtpFechaVencimiento.Enabled = false;
+            dtpFechaVencimiento.Format = DateTimePickerFormat.Custom;
+            dtpFechaVencimiento.CustomFormat = "dd/MM/yyyy";
         }
 
         private void numDuracion_ValueChanged(object sender, EventArgs e)

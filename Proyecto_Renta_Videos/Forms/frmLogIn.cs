@@ -19,6 +19,7 @@ namespace Proyecto_Renta_Videos.Forms
         public frmLogIn()
         {
             InitializeComponent();
+            this.AcceptButton = btnInicioSesion;
         }
 
         private void btnInicioSesion_Click(object sender, EventArgs e)
