@@ -59,19 +59,12 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             // lblIDRenta
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b54543c96ccd7eeea7a0956d3f94f847561bdb1b
             this.lblIDRenta.AutoSize = true;
             this.lblIDRenta.Location = new System.Drawing.Point(297, 105);
             this.lblIDRenta.Name = "lblIDRenta";
             this.lblIDRenta.Size = new System.Drawing.Size(87, 25);
             this.lblIDRenta.TabIndex = 5;
             this.lblIDRenta.Text = "ID Renta";
-<<<<<<< HEAD
-=======
-=======
             // 
             // txtIDRenta
             // 
@@ -84,7 +77,6 @@ namespace Proyecto_Renta_Videos.Forms
             // 
             // lblIDCliente
             // 
->>>>>>> b54543c96ccd7eeea7a0956d3f94f847561bdb1b
             this.lblIDCliente.AutoSize = true;
             this.lblIDCliente.Location = new System.Drawing.Point(12, 102);
             this.lblIDCliente.Name = "lblIDCliente";
@@ -92,23 +84,14 @@ namespace Proyecto_Renta_Videos.Forms
             this.lblIDCliente.TabIndex = 1;
             this.lblIDCliente.Text = "ID Cliente";
             this.lblIDCliente.Click += new System.EventHandler(this.label1_Click_1);
-<<<<<<< HEAD
->>>>>>> a42596afc5e35dd5dfe52183ccb0536053f45e96
-=======
->>>>>>> b54543c96ccd7eeea7a0956d3f94f847561bdb1b
             // 
             // lblNombre
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.txtIDRenta.Location = new System.Drawing.Point(424, 102);
             this.txtIDRenta.Multiline = true;
             this.txtIDRenta.Name = "txtIDRenta";
             this.txtIDRenta.Size = new System.Drawing.Size(206, 37);
             this.txtIDRenta.TabIndex = 12;
-=======
-=======
->>>>>>> b54543c96ccd7eeea7a0956d3f94f847561bdb1b
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(12, 163);
             this.lblNombre.Name = "lblNombre";
@@ -216,10 +199,6 @@ namespace Proyecto_Renta_Videos.Forms
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(206, 40);
             this.txtCantidad.TabIndex = 14;
-<<<<<<< HEAD
->>>>>>> a42596afc5e35dd5dfe52183ccb0536053f45e96
-=======
->>>>>>> b54543c96ccd7eeea7a0956d3f94f847561bdb1b
             // 
             // btnVolver
             // 
@@ -254,22 +233,16 @@ namespace Proyecto_Renta_Videos.Forms
             this.Column3,
             this.Column5,
             this.Column6,
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.Column8,
-            this.Column9});
-            this.dgvRenta.Location = new System.Drawing.Point(17, 308);
-=======
-            this.Column7});
-            this.dgvRenta.Location = new System.Drawing.Point(70, 586);
->>>>>>> a42596afc5e35dd5dfe52183ccb0536053f45e96
-=======
             this.Column8,
             this.Column9});
             this.dgvRenta.Location = new System.Drawing.Point(17, 308);
             this.Column7});
             this.dgvRenta.Location = new System.Drawing.Point(70, 586);
->>>>>>> b54543c96ccd7eeea7a0956d3f94f847561bdb1b
+            this.Column8,
+            this.Column9});
+            this.dgvRenta.Location = new System.Drawing.Point(17, 308);
+            this.Column7});
+            this.dgvRenta.Location = new System.Drawing.Point(70, 586);
             this.dgvRenta.Name = "dgvRenta";
             this.dgvRenta.ReadOnly = true;
             this.dgvRenta.RowHeadersWidth = 51;
