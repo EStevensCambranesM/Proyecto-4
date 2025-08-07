@@ -148,7 +148,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void listaProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaProveedores listaProveedores = new frmListaProveedores();
+            frmListaProveedor listaProveedores = new frmListaProveedor();
             listaProveedores.Show();
         }
 
