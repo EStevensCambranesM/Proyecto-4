@@ -190,11 +190,8 @@ namespace Proyecto_Renta_Videos.Forms
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(246, 401);
             this.label8.Name = "label8";
-<<<<<<< HEAD
             this.label8.Size = new System.Drawing.Size(20, 20);
-=======
             this.label8.Size = new System.Drawing.Size(0, 25);
->>>>>>> 845a523bb4ac161674d8e4479c9e5906e551bdc5
             this.label8.TabIndex = 14;
             // 
             // label9
