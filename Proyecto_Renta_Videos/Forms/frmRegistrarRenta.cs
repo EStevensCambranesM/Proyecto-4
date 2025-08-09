@@ -15,7 +15,11 @@ namespace Proyecto_Renta_Videos.Forms
     public partial class frmRegistrarRenta : Form
     {
         //cadena de conexion
+<<<<<<< HEAD
+        string connectionString = "server= 127.0.0.1; database=RentaDeVideos; uid=ESCM; pwd=escm1823";
+=======
         string connectionString = "server= 192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
+>>>>>>> 36558c87c8b7ac9044f3a20105fe8e0ed95c9031
         private DateTime fechaActual;
         private decimal totalAcumulado = 0m;
 
