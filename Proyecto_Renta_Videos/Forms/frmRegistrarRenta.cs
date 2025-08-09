@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmRegistrarRenta : Form
     {
         //cadena de conexion
-        string connectionString = "server= 192.168.1.250; database=RentaDeVideos; uid=remoto1; pwd=123456";
+        string connectionString = "server= 192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
         private DateTime fechaActual;
+        private decimal totalAcumulado = 0m;
 
 
         public frmRegistrarRenta()
@@ -59,8 +61,17 @@ namespace Proyecto_Renta_Videos.Forms
             //contador de videos agregados
             dgvVideos.AllowUserToAddRows = false;
             label8.Text = "0";
+            totalAcumulado = 0;
+            total.Text = totalAcumulado.ToString("0.00");
             //cargar clientes 
             CargarCliente();
+            CargarMetodosPago();
+
+            //Limitar NIT y Direccion
+            txtNIT.MaxLength = 9;
+            txtDireccion.MaxLength = 15;
+
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -106,9 +117,16 @@ namespace Proyecto_Renta_Videos.Forms
             }
 
             // todo correcto
-            MessageBox.Show("Datos agregados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Datos, renta y factura registrados.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            int idFactura = InsertarFactura();
+            decimal subtotal = totalAcumulado;
+
+            bool aplicarDescuento = chkAplicar_desc.Checked;
+            decimal totalFinal = aplicarDescuento ? Math.Round(subtotal * 0.90m, 2) : subtotal;
+
+            total.Text = totalFinal.ToString("0.00");
+
+            int idFactura = InsertarFactura(subtotal, totalFinal);
             if (idFactura > 0)
             {
                 InsertarRenta(idFactura);
@@ -131,8 +149,15 @@ namespace Proyecto_Renta_Videos.Forms
                 string descp = dgvAgregarrenta.Rows[index].Cells["iDescripcionFK"].Value.ToString();
                 string formato = dgvAgregarrenta.Rows[index].Cells["cFormato"].Value.ToString();
                 string nombre = dgvAgregarrenta.Rows[index].Cells["sNombre"].Value.ToString();
+                string precio = dgvAgregarrenta.Rows[index].Cells["dcPrecio"].Value.ToString();
 
-                dgvVideos.Rows.Add(idvideo, descp, formato, nombre);
+                dgvVideos.Rows.Add(idvideo, descp, formato, nombre, precio);
+
+                if (decimal.TryParse(precio, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal p))
+                {
+                    totalAcumulado += p;
+                    total.Text = totalAcumulado.ToString("0.00");
+                }
 
                 //mostrar la canridad de videos agregados
                 label8.Text = dgvVideos.RowCount.ToString();
@@ -148,6 +173,14 @@ namespace Proyecto_Renta_Videos.Forms
             //Eliminar videos de la lista de agregar
             if (dgvVideos.CurrentRow != null)
             {
+                var val = dgvVideos.CurrentRow.Cells[4].Value.ToString();
+                if (decimal.TryParse(val, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal p))
+                {
+                    totalAcumulado -= p;
+                    if (totalAcumulado < 0) totalAcumulado = 0;
+                    total.Text = totalAcumulado.ToString("0.00");
+                }
+
                 dgvVideos.Rows.Remove(dgvVideos.CurrentRow);
 
                 //actualizar contador cuando se elimina un video
@@ -158,6 +191,7 @@ namespace Proyecto_Renta_Videos.Forms
                 MessageBox.Show("Selecciona una fila para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void CargarCliente()
         {
@@ -213,7 +247,7 @@ namespace Proyecto_Renta_Videos.Forms
             }
         }
 
-        private int InsertarFactura()
+        private int InsertarFactura(decimal subtotal, decimal totalFinal)
         {
             int idFactura = 0;
             try
@@ -239,8 +273,8 @@ namespace Proyecto_Renta_Videos.Forms
                         cmd.Parameters.AddWithValue("@NIT", nit);
                         cmd.Parameters.AddWithValue("@Direccion", direccion);
                         cmd.Parameters.AddWithValue("@Fecha", fechaActual);
-                        cmd.Parameters.AddWithValue("@Precio", 0.00);
-                        cmd.Parameters.AddWithValue("@Total", 0.00);
+                        cmd.Parameters.AddWithValue("@Precio", subtotal);
+                        cmd.Parameters.AddWithValue("@Total", totalFinal);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -249,8 +283,6 @@ namespace Proyecto_Renta_Videos.Forms
                     {
                         idFactura = Convert.ToInt32(cmd2.ExecuteScalar());
                     }
-
-                    MessageBox.Show("Factura registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             
             }
@@ -285,7 +317,15 @@ namespace Proyecto_Renta_Videos.Forms
 
                         int idCliente = clienteSeleccionado.Value;
                         //obtener el metodo de pago
-                        int metodoPago = cbometodo_pago.SelectedItem?.ToString() == "Efectivo" ? 1 : 2;
+                        var metodoItem = cbometodo_pago.SelectedItem as ComboBoxItem;
+                        if (metodoItem == null)
+                        {
+                            MessageBox.Show("Debe seleccionar un método de pago.", "Advertencia",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        int metodoPago = metodoItem.Value;
                         //obtener el descuento
                         bool descuento = chkAplicar_desc.Checked;
 
@@ -298,8 +338,6 @@ namespace Proyecto_Renta_Videos.Forms
                         cmd.Parameters.AddWithValue("@Descuento", descuento);
 
                         cmd.ExecuteNonQuery();
-
-                        MessageBox.Show("Renta registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -307,6 +345,17 @@ namespace Proyecto_Renta_Videos.Forms
             {
                 MessageBox.Show("Error al registrar la renta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CargarMetodosPago()
+        {
+            cbometodo_pago.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbometodo_pago.Items.Clear();
+
+            cbometodo_pago.Items.Add(new ComboBoxItem("Efectivo", 1));
+            cbometodo_pago.Items.Add(new ComboBoxItem("Tarjeta", 2));
+
+            cbometodo_pago.SelectedIndex = 0; // opcional
         }
 
     }

@@ -37,17 +37,18 @@
             // msNavegacionAyuda
             // 
             this.msNavegacionAyuda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msNavegacionAyuda.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msNavegacionAyuda.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volverAMenuToolStripMenuItem});
             this.msNavegacionAyuda.Location = new System.Drawing.Point(0, 0);
             this.msNavegacionAyuda.Name = "msNavegacionAyuda";
-            this.msNavegacionAyuda.Size = new System.Drawing.Size(431, 29);
+            this.msNavegacionAyuda.Size = new System.Drawing.Size(431, 36);
             this.msNavegacionAyuda.TabIndex = 0;
             // 
             // volverAMenuToolStripMenuItem
             // 
             this.volverAMenuToolStripMenuItem.Name = "volverAMenuToolStripMenuItem";
-            this.volverAMenuToolStripMenuItem.Size = new System.Drawing.Size(122, 25);
+            this.volverAMenuToolStripMenuItem.Size = new System.Drawing.Size(151, 32);
             this.volverAMenuToolStripMenuItem.Text = "Volver a Menu";
             this.volverAMenuToolStripMenuItem.Click += new System.EventHandler(this.volverAMenuToolStripMenuItem_Click);
             // 
@@ -64,7 +65,7 @@
             // 
             // frmAyuda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(431, 177);

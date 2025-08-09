@@ -31,6 +31,9 @@ namespace Proyecto_Renta_Videos.Forms
             //Fecha de Actual
             fecha.Text = DateTime.Now.ToString();
             CargarCliente();
+
+            dgvRentaactiva.CellClick += dgvRentaactiva_CellContentClick;
+            btnDevolver.Click += btnDevolver_Click;
         }
 
         private void btnDevolver_Click(object sender, EventArgs e)
@@ -69,7 +72,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void CargarCliente()
         {
-            string connectionString = "server=192.168.1.250; database=RentaDeVideos; uid=remoto1; pwd=123456";
+            string connectionString = "server=192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
 
             try
             {
@@ -109,7 +112,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void CargarRentasActivas(int idCliente)
         {
-            string connectionString = "server=192.168.1.250; database=RentaDeVideos; uid=remoto1; pwd=123456";
+            string connectionString = "server=192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
 
             try
             {
@@ -145,17 +148,76 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void cboCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBoxItem clienteSeleccionado = cboCliente.SelectedItem as ComboBoxItem;
-            if (clienteSeleccionado != null)
+            var clienteSeleccionado = cboCliente.SelectedItem as ComboBoxItem;
+            if (clienteSeleccionado == null) return;
+
+            CargarRentasActivas(clienteSeleccionado.Value);
+
+            if (dgvRentaactiva.Rows.Count > 0)
             {
-                int idCliente = clienteSeleccionado.Value;
-                CargarRentasActivas(idCliente);
+                dgvRentaactiva.ClearSelection();
+                dgvRentaactiva.Rows[0].Selected = true;
+                dgvRentaactiva.CurrentCell = dgvRentaactiva.Rows[0].Cells[0];
+                ActualizarVerificacionesDesdeFilaActual();
+            }
+            else
+            {
+                renta.Text = "—";
+                atraso.Text = "0";
+                multas.Text = "No";
             }
         }
+        
 
         private void dgvRentaactiva_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            if (e.RowIndex >= 0) ActualizarVerificacionesDesdeFilaActual();
+        }
+
+        private void ActualizarVerificacionesDesdeFilaActual(int diasPlazo = 7)
+        {
+            if (dgvRentaactiva.CurrentRow == null) return;
+
+            object val = dgvRentaactiva.CurrentRow.Cells["iFacturaFK"].Value;
+            if (val == null) return;
+
+            int idFactura;
+            if (!int.TryParse(val.ToString(), out idFactura)) return;
+
+            string connectionString = "server=192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
+            try
+            {
+                using (var conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (var cmd = new MySqlCommand("SELECT dFechaEmision FROM tblFactura WHERE IdFacturaPK=@id", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", idFactura);
+                        var result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            DateTime fechaEmision = Convert.ToDateTime(result);
+                            renta.Text = fechaEmision.ToString("g");
+
+                            int diasAtraso = (DateTime.Now.Date - fechaEmision.Date).Days - diasPlazo;
+                            if (diasAtraso < 0) diasAtraso = 0;
+                            atraso.Text = diasAtraso.ToString();
+                            multas.Text = diasAtraso > 0 ? "Sí" : "No";
+                        }
+                        else
+                        {
+                            renta.Text = "—";
+                            atraso.Text = "0";
+                            multas.Text = "No";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener la fecha de la factura: " + ex.Message);
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -172,7 +234,58 @@ namespace Proyecto_Renta_Videos.Forms
                 MessageBox.Show("Por favor selecciona una renta activa para devolver.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
     }
+
+        private void btnDevolver_Click_1(object sender, EventArgs e)
+        {
+            if (cboCliente.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecciona un cliente.", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (dgvRentaactiva.CurrentRow == null)
+            {
+                MessageBox.Show("Selecciona una renta activa.", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int idRenta = Convert.ToInt32(dgvRentaactiva.CurrentRow.Cells["IdRentaPK"].Value);
+            string connectionString = "server=192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
+
+            try
+            {
+                using (var conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (var cmd = new MySqlCommand(
+                        "UPDATE tblRenta SET iEstado = 2 WHERE IdRentaPK = @rentaId", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@rentaId", idRenta);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                // refrescar la grilla del cliente actual
+                var cli = cboCliente.SelectedItem as ComboBoxItem;
+                if (cli != null) CargarRentasActivas(cli.Value);
+
+                // limpiar verificaciones
+                renta.Text = "—";
+                atraso.Text = "0";
+                multas.Text = "No";
+
+                MessageBox.Show("Devolución registrada.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar la devolución: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
-   }
+    }
+   
 
 

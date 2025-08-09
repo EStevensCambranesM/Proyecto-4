@@ -230,6 +230,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCompra";
             this.Text = "frmCompra";
+            this.Load += new System.EventHandler(this.frmCompra_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
