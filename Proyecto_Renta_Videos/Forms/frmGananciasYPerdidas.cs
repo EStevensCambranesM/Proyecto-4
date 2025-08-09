@@ -142,6 +142,11 @@ namespace Proyecto_Renta_Videos.Forms
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmGananciasYPerdidas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
