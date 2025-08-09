@@ -52,10 +52,10 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.Location = new System.Drawing.Point(80, 86);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(103, 27);
+            this.lblProducto.Size = new System.Drawing.Size(98, 25);
             this.lblProducto.TabIndex = 0;
             this.lblProducto.Text = "Producto";
             // 
@@ -70,20 +70,20 @@
             // txtPrecio
             // 
             this.txtPrecio.AutoSize = true;
-            this.txtPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(82, 177);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(102, 27);
+            this.txtPrecio.Size = new System.Drawing.Size(99, 25);
             this.txtPrecio.TabIndex = 2;
             this.txtPrecio.Text = "Cantidad";
             // 
             // txtfecha
             // 
             this.txtfecha.AutoSize = true;
-            this.txtfecha.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfecha.Location = new System.Drawing.Point(84, 279);
             this.txtfecha.Name = "txtfecha";
-            this.txtfecha.Size = new System.Drawing.Size(97, 27);
+            this.txtfecha.Size = new System.Drawing.Size(92, 25);
             this.txtfecha.TabIndex = 3;
             this.txtfecha.Text = "Subtotal";
             // 
@@ -101,21 +101,21 @@
             // txtListaCompra
             // 
             this.txtListaCompra.AutoSize = true;
-            this.txtListaCompra.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtListaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtListaCompra.Location = new System.Drawing.Point(671, 86);
             this.txtListaCompra.Name = "txtListaCompra";
-            this.txtListaCompra.Size = new System.Drawing.Size(172, 27);
+            this.txtListaCompra.Size = new System.Drawing.Size(165, 25);
             this.txtListaCompra.TabIndex = 5;
             this.txtListaCompra.Text = "Lista de compra";
             // 
             // txtCompras
             // 
             this.txtCompras.AutoSize = true;
-            this.txtCompras.BackColor = System.Drawing.Color.Azure;
-            this.txtCompras.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompras.Location = new System.Drawing.Point(358, 30);
+            this.txtCompras.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.txtCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompras.Location = new System.Drawing.Point(364, 30);
             this.txtCompras.Name = "txtCompras";
-            this.txtCompras.Size = new System.Drawing.Size(289, 37);
+            this.txtCompras.Size = new System.Drawing.Size(276, 32);
             this.txtCompras.TabIndex = 6;
             this.txtCompras.Text = "Datos de la compra";
             this.txtCompras.Click += new System.EventHandler(this.txtCompras_Click);
@@ -135,20 +135,20 @@
             this.regresarAMenùToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1012, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1012, 30);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // regresarAMenùToolStripMenuItem
             // 
             this.regresarAMenùToolStripMenuItem.Name = "regresarAMenùToolStripMenuItem";
-            this.regresarAMenùToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.regresarAMenùToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.regresarAMenùToolStripMenuItem.Text = "Regresar a menù";
             this.regresarAMenùToolStripMenuItem.Click += new System.EventHandler(this.regresarAMenùToolStripMenuItem_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(35, 393);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(133, 41);
@@ -169,10 +169,10 @@
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.Location = new System.Drawing.Point(294, 83);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(116, 27);
+            this.lblProveedor.Size = new System.Drawing.Size(111, 25);
             this.lblProveedor.TabIndex = 12;
             this.lblProveedor.Text = "Proveedor";
             // 
@@ -186,7 +186,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(185, 393);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(133, 41);
@@ -197,7 +197,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(338, 393);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(133, 41);
