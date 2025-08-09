@@ -76,8 +76,8 @@ namespace Proyecto_Renta_Videos.Forms
                                 lector["sCUI"],
                                 lector["sNombre"],
                                 lector["sApellido"],
-                                lector["sCorreo"],
                                 lector["cSexo"],
+                                lector["sCorreo"],
                                 lector["sTelefono"],
                                 lector["iRolFK"]
                             );
@@ -91,6 +91,7 @@ namespace Proyecto_Renta_Videos.Forms
         {
             string filtro = txtBuscar.Text.Trim();
             cargarEmpleados(filtro);
+            cargarEmpleados(txtBuscar.Text);
         }
 
         private void dgvVerUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -154,11 +155,6 @@ namespace Proyecto_Renta_Videos.Forms
             frmMenuPrincipal menu = new frmMenuPrincipal();
             menu.Show();
             this.Hide();
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            cargarEmpleados(txtBuscar.Text);
         }
     }
 }

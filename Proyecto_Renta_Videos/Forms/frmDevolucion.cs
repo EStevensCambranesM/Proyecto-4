@@ -69,7 +69,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void CargarCliente()
         {
-            string connectionString = "server=192.168.1.250; database=RentaDeVideos; uid=remoto1; pwd=123456";
+            string connectionString = "server= 127.0.0.1; database=RentaDeVideos; uid=ESCM; pwd=escm1823";
 
             try
             {
@@ -109,7 +109,7 @@ namespace Proyecto_Renta_Videos.Forms
 
         private void CargarRentasActivas(int idCliente)
         {
-            string connectionString = "server=192.168.1.250; database=RentaDeVideos; uid=remoto1; pwd=123456";
+            string connectionString = "server= 127.0.0.1; database=RentaDeVideos; uid=ESCM; pwd=escm1823";
 
             try
             {
