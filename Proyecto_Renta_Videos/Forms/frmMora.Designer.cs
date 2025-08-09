@@ -108,6 +108,7 @@
             this.dgvMora.RowTemplate.Height = 24;
             this.dgvMora.Size = new System.Drawing.Size(679, 150);
             this.dgvMora.TabIndex = 14;
+            this.dgvMora.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMora_CellContentClick);
             // 
             // IdRenta
             // 

@@ -13,7 +13,11 @@ namespace Proyecto_Renta_Videos.Forms
 {
     public partial class frmMora : Form
     {
+<<<<<<< HEAD
         string connectionString = "server= 127.0.0.1; database=RentaDeVideos; uid=ESCM; pwd=escm1823";
+=======
+        string connectionString = "server=192.168.1.50; database=RentaDeVideos; uid=remoto1; pwd=123456";
+>>>>>>> 36558c87c8b7ac9044f3a20105fe8e0ed95c9031
 
         public frmMora()
         {
@@ -75,7 +79,7 @@ namespace Proyecto_Renta_Videos.Forms
                 }
                 else
                 {
-                    MessageBox.Show("No hay días de atraso. No se aplica multa.");
+                    MessageBox.Show("No hay días de atraso. No se aplica mora.");
                 }
             }
         }
@@ -150,58 +154,71 @@ namespace Proyecto_Renta_Videos.Forms
             }
         }
 
-        private void CargarRentasConMora(int idCliente)
+        private void CargarRentasConMora(int idCliente, int plazoDias = 7)
         {
-            try
+           try
+    {
+        using (var conn = new MySqlConnection(connectionString))
+        {
+            conn.Open();
+            string sql = @"
+             SELECT 
+             r.IdRentaPK,
+             CONCAT(m.sNombre, ' ', m.sApellido) AS Cliente,
+             f.dFechaEmision,
+             r.bMora
+             FROM tblRenta r
+             JOIN tblFactura f           ON r.iFacturaFK = f.IdFacturaPK
+             JOIN tblClientes c          ON r.iClienteFK = c.IdClientesPK
+             JOIN tblMembresíaCliente m  ON c.iMembresiaClienteFK = m.IdMembresiaPK
+             WHERE r.iEstado = 1 AND r.iClienteFK = @cli;";
+
+            using (var cmd = new MySqlCommand(sql, conn))
             {
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                cmd.Parameters.AddWithValue("@cli", idCliente);
+                using (var rd = cmd.ExecuteReader())
                 {
-                    conn.Open();
-
-                    string query = @"
-                SELECT r.IdRentaPK, r.bMora, f.dFechaEmision, m.sNombre, m.sApellido
-                FROM tblRenta r
-                INNER JOIN tblFactura f ON r.iFacturaFK = f.IdFacturaPK
-                INNER JOIN tblClientes c ON r.iClienteFK = c.IdClientesPK
-                INNER JOIN tblMembresíaCliente m ON c.iMembresiaClienteFK = m.IdMembresiaPK
-                WHERE r.iEstado = 1 AND r.iClienteFK = @idCliente";
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@idCliente", idCliente);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    dgvMora.Rows.Clear();
-                    dgvMora.Columns.Clear();
-
-                    // Definir columnas si están vacías
+                    // Config columnas una vez
                     if (dgvMora.Columns.Count == 0)
                     {
+                        dgvMora.AllowUserToAddRows = false;
+                        dgvMora.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                        dgvMora.MultiSelect = false;
+
                         dgvMora.Columns.Add("IdRenta", "IdRenta");
                         dgvMora.Columns.Add("Cliente", "Cliente");
                         dgvMora.Columns.Add("Fecha", "Fecha");
-                        dgvMora.Columns.Add("Mora", "Mora");
-                        dgvMora.Columns.Add("Dias_atraso", "Días_atraso");
+
+                        var colMora = new DataGridViewCheckBoxColumn { Name = "Mora", HeaderText = "Mora", ReadOnly = true };
+                        dgvMora.Columns.Add(colMora);
+
+                        var colDias = new DataGridViewTextBoxColumn { Name = "Dias_atraso", HeaderText = "Días_atraso" };
+                        dgvMora.Columns.Add(colDias);
                     }
 
-                    while (reader.Read())
+                    dgvMora.Rows.Clear();
+                    while (rd.Read())
                     {
-                        int idRenta = reader.GetInt32("IdRentaPK");
-                        string clienteNombre = reader.GetString("sNombre") + " " + reader.GetString("sApellido");
-                        DateTime fechaEmision = reader.GetDateTime("dFechaEmision");
-                        bool mora = reader.GetBoolean("bMora");
+                        int idRenta = rd.GetInt32("IdRentaPK");
+                        string cliente = rd.GetString("Cliente");
+                        DateTime fechaEmision = rd.GetDateTime("dFechaEmision");
+                        bool mora = rd.GetBoolean("bMora");
 
-                        int diasAtraso = (DateTime.Now - fechaEmision).Days;
+                        // Vencimiento = Emisión + plazo
+                        DateTime vence = fechaEmision.Date.AddDays(plazoDias);
+                        int diasAtraso = (DateTime.Now.Date - vence).Days;
+                        if (diasAtraso < 0) diasAtraso = 0;
 
-                        dgvMora.Rows.Add(idRenta, clienteNombre, fechaEmision.ToShortDateString(), mora ? "Sí" : "No", diasAtraso);
+                        dgvMora.Rows.Add(idRenta, cliente, fechaEmision.ToShortDateString(), mora, diasAtraso);
                     }
-                    reader.Close();
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar rentas: " + ex.Message);
-            }
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Error al cargar rentas: " + ex.Message);
+    }
         }
 
         private void cboCliente_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -210,6 +227,11 @@ namespace Proyecto_Renta_Videos.Forms
             {
                 CargarRentasConMora(cliente.Value);
             }
+        }
+
+        private void dgvMora_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

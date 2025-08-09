@@ -163,6 +163,7 @@
             this.Name = "frmGananciasYPerdidas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGananciasYPerdidas";
+            this.Load += new System.EventHandler(this.frmGananciasYPerdidas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGanancias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -214,6 +214,10 @@ namespace Proyecto_Renta_Videos.Forms
             public decimal Subtotal { get; set; }
         }
 
+        private void frmCompra_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

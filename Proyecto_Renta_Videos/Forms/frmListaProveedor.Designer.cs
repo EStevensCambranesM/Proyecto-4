@@ -53,10 +53,10 @@
             // lblListaProveedores
             // 
             this.lblListaProveedores.AutoSize = true;
-            this.lblListaProveedores.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaProveedores.Location = new System.Drawing.Point(332, 30);
+            this.lblListaProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaProveedores.Location = new System.Drawing.Point(335, 35);
             this.lblListaProveedores.Name = "lblListaProveedores";
-            this.lblListaProveedores.Size = new System.Drawing.Size(348, 44);
+            this.lblListaProveedores.Size = new System.Drawing.Size(354, 39);
             this.lblListaProveedores.TabIndex = 1;
             this.lblListaProveedores.Text = "Lista de proveedores";
             // 
